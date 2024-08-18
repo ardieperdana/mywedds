@@ -3,56 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devi & Ardie Wedding Invitation</title>
-    <link rel="icon" href="ring.png">
+    <title>Undangan Pernikahan Devi & Ardie</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <h1>Devi & Ardie</h1>
+            <p>12 Oktober 2024</p>
+        </div>
+    </header>
 
-    <div id="landingPage">
-        <button id="openButton">Open Invitation</button>
-    </div>
+    <section class="intro">
+        <div class="container">
+            <h2>Welcome to Our Wedding</h2>
+            <p>Dengan penuh cinta dan kebahagiaan, kami mengundang Anda untuk merayakan hari istimewa kami.</p>
+        </div>
+    </section>
 
-    <div id="invitation" class="hidden">
-        <section id="intro">
-            <h1>Devi <span>dan</span> Ardie</h1>
-            <p>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya.”</p>
-            <p>--- QS. Ar Ruum: 21</p>
-            <img src="1.jpg" alt="Devi dan Ardie">
-            <div class="event-info">
-                <p>Acara telah selesai</p>
-                <p>Rabu, 17 Juli 2024</p>
+    <section class="photos">
+        <div class="container">
+            <h2>Our Journey</h2>
+            <div class="photo-grid">
+                <img src="1.jpg" alt="Foto 1">
+                <img src="2.jpg" alt="Foto 2">
+                <img src="3.jpg" alt="Foto 3">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="bride">
-            <img src="2.jpg" alt="Devi">
-            <h2>Agnia Indah Indrasari</h2>
-            <p>Putri kedua dari: Bapak Mudjijianto (Alm.) dan Ibu Siti S.Pd</p>
-        </section>
-
-        <section id="groom">
-            <img src="3.jpg" alt="Ardie">
-            <h2>Ardie Perdana Muhammad</h2>
-            <p>Putra dari: Bapak Aris dan Ibu Siti M.Pd</p>
-        </section>
-
-        <section id="gallery">
-            <div class="slideshow">
-                <img src="4.jpg" alt="Gallery Image 1">
-                <img src="5.jpg" alt="Gallery Image 2">
-                <img src="6.jpg" alt="Gallery Image 3">
+    <section class="details">
+        <div class="container">
+            <div class="detail-item">
+                <h3>Tanggal</h3>
+                <p>Sabtu, 12 Oktober 2024</p>
             </div>
-        </section>
+            <div class="detail-item">
+                <h3>Tempat</h3>
+                <p>Gedung Serbaguna, Jakarta</p>
+            </div>
+            <div class="detail-item">
+                <h3>Lokasi</h3>
+                <div class="map">
+                    <iframe src="https://maps.google.com/maps?q=Gedung%20Serbaguna,%20Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="gift">
-            <h3>Pengiriman Hadiah</h3>
-            <p>Rekening BCA: Devi - 1111111111</p>
-            <p>Rekening Mandiri: Devi - 2222222222</p>
-            <img src="qris.png" alt="QRIS" class="qris">
-        </section>
-    </div>
+    <section class="rsvp">
+        <div class="container">
+            <h2>RSVP</h2>
+            <form>
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan atau pertanyaan"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <p>With love, Devi & Ardie</p>
+        </div>
+    </footer>
 </body>
 </html>
