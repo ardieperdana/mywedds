@@ -116,6 +116,42 @@ a:hover {
     font-size: 2rem;
 }
 
+/* Photos Section */
+.photos {
+    padding: 100px 20px;
+    background-color: #ff9aa2;
+    text-align: center;
+}
+
+.photos h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* RSVP Section */
 .rsvp {
     padding: 100px 20px;
@@ -197,15 +233,4 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .details h2, .rsvp h2, .location h2 {
-        font-size: 2rem;
-    }
-}
+    .photo
