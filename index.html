@@ -8,62 +8,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
+    <header class="header">
+        <div class="container">
             <h1>Devi & Ardie</h1>
             <p>12 Oktober 2024</p>
         </div>
-    </div>
+    </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#rsvp">RSVP</a></li>
-            <li><a href="#location">Location</a></li>
-        </ul>
-    </nav>
-
-    <section id="details" class="details">
-        <div class="content">
-            <h2>You're Invited!</h2>
-            <p>Dengan suka cita, kami mengundang Anda untuk menghadiri acara pernikahan kami yang penuh cinta dan kebahagiaan.</p>
-            <div class="event-info">
-                <div>
-                    <h3>Waktu</h3>
-                    <p>Sabtu, 12 Oktober 2024</p>
-                </div>
-                <div>
-                    <h3>Tempat</h3>
-                    <p>Gedung Serbaguna, Jakarta</p>
-                </div>
-            </div>
+    <section class="intro">
+        <div class="container">
+            <h2>Welcome to Our Wedding</h2>
+            <p>Dengan penuh cinta dan kebahagiaan, kami mengundang Anda untuk merayakan hari istimewa kami.</p>
         </div>
     </section>
 
-    <!-- Photos Section -->
-    <section id="photos" class="photos">
-        <div class="content">
+    <section class="photos">
+        <div class="container">
             <h2>Our Journey</h2>
             <div class="photo-grid">
-                <div class="photo">
-                    <img src="1.jpg" alt="Foto 1">
-                </div>
-                <div class="photo">
-                    <img src="2.jpg" alt="Foto 2">
-                </div>
-                <div class="photo">
-                    <img src="3.jpg" alt="Foto 3">
+                <img src="1.jpg" alt="Foto 1">
+                <img src="2.jpg" alt="Foto 2">
+                <img src="3.jpg" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="container">
+            <div class="detail-item">
+                <h3>Tanggal</h3>
+                <p>Sabtu, 12 Oktober 2024</p>
+            </div>
+            <div class="detail-item">
+                <h3>Tempat</h3>
+                <p>Gedung Serbaguna, Jakarta</p>
+            </div>
+            <div class="detail-item">
+                <h3>Lokasi</h3>
+                <div class="map">
+                    <iframe src="https://maps.google.com/maps?q=Gedung%20Serbaguna,%20Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="rsvp" class="rsvp">
-        <div class="content">
+    <section class="rsvp">
+        <div class="container">
             <h2>RSVP</h2>
-            <p>Mohon konfirmasi kehadiran Anda:</p>
             <form>
                 <input type="text" placeholder="Nama Anda" required>
                 <input type="email" placeholder="Email Anda" required>
@@ -73,18 +64,10 @@
         </div>
     </section>
 
-    <section id="location" class="location">
-        <div class="content">
-            <h2>Lokasi</h2>
-            <p>Gedung Serbaguna, Jl. Merdeka No.123, Jakarta</p>
-            <div class="map">
-                <iframe src="https://maps.google.com/maps?q=Gedung%20Serbaguna,%20Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <p>With love, Devi & Ardie</p>
         </div>
-    </section>
-
-    <footer>
-        <p>With love, Devi & Ardie</p>
     </footer>
 </body>
 </html>
