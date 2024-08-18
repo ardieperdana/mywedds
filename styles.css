@@ -57,6 +57,7 @@ p {
 }
 
 /* Photos Section */
+/* Photos Section */
 .photos {
     padding: 50px 0;
     text-align: center;
@@ -72,7 +73,10 @@ p {
 .photo-grid img {
     width: 100%;
     height: auto;
+    max-width: 100%; /* Membatasi lebar gambar */
+    max-height: 100%; /* Membatasi tinggi gambar */
     border-radius: 10px;
+    object-fit: cover; /* Menjaga proporsi gambar */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
