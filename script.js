@@ -1,25 +1,16 @@
-let currentSlide = 0;
+document.getElementById('openButton').addEventListener('click', function() {
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('invitation').classList.remove('hidden');
+});
 
-function openInvitation() {
-    document.querySelector('.open-button').style.display = 'none';
-    document.querySelector('.invitation-content').classList.remove('hidden');
-    startSlideshow();
-}
-
-function startSlideshow() {
-    const slides = document.querySelectorAll('.slideshow-container img');
-    slides[currentSlide].style.opacity = 0;
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].style.opacity = 1;
-    setTimeout(startSlideshow, 3000); // 3 detik untuk tiap slide
-}
-
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
-    const photos = document.querySelector('.slideshow-container');
-    if (scrollPosition > photos.offsetTop - window.innerHeight + 200) {
-        photos.style.opacity = 1;
-    } else {
-        photos.style.opacity = 0;
-    }
+// Scroll show photo effect
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom) {
+            section.classList.add('show');
+        }
+    });
 });
