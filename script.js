@@ -1,28 +1,15 @@
-<script>
-    document.getElementById('ucapanForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+document.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
 
-        const nama = document.getElementById('nama').value;
-        const pesan = document.getElementById('pesan').value;
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
 
-        if (nama && pesan) {
-            const ucapanList = document.getElementById('ucapanList');
-
-            const ucapanItem = document.createElement('div');
-            ucapanItem.className = 'ucapan-item';
-
-            const ucapanNama = document.createElement('h3');
-            ucapanNama.textContent = nama;
-
-            const ucapanPesan = document.createElement('p');
-            ucapanPesan.textContent = pesan;
-
-            ucapanItem.appendChild(ucapanNama);
-            ucapanItem.appendChild(ucapanPesan);
-
-            ucapanList.appendChild(ucapanItem);
-
-            document.getElementById('ucapanForm').reset();
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
         }
-    });
-</script>
+    }
+});
