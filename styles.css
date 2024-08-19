@@ -120,14 +120,14 @@ p {
 
 /* Intro Section */
 .header {
-    position: relative; /* Ensure the header is positioned correctly */
+    position: fixed; /* Ensure the header is positioned correctly */
     z-index: 1; /* Ensure it stacks below the intro section */
 }
 
 .intro {
     background-color: #ff9aa2;
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
     position: relative;
     z-index: 2;
     clear: both; /* Ensure it clears any floating elements */
