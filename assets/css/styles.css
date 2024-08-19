@@ -27,7 +27,7 @@ h2 {
 }
 
 .section {
-    padding: 60px 20px;
+    padding: 15px;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
@@ -137,4 +137,43 @@ h2 {
     50% {
         opacity: 1;
     }
+}
+
+.title h2{
+    margin-top: 15px;
+}
+.title h2.name{
+    font-weight: bold;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex .title,
+.flex .img{
+    width: 50%;
+}
+
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .flex .img{
+        width: 70%;
+    }
+    .title h2{
+        font-size: 17px;
+    }
+    .title h2.binti{
+        font-size: 12px;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
 }
