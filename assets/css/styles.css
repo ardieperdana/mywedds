@@ -136,6 +136,30 @@ label.content::before{
 
 }
 
+.title-bride, .title-groom {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Atur agar gambar sepenuhnya terlihat */
+    padding: 20px;
+    text-align: center;
+    color: #808080; /* Opsional: Ubah warna teks agar kontras dengan background */
+    margin-bottom: px; /* Beri jarak antara kedua div */
+	opacity: 0.4; 
+}
+
+.title-bride {
+    background-image: url('../../media/bride.png'); /* Pastikan path gambar benar */
+}
+
+.title-groom {
+    background-image: url('../../media/groom.png'); /* Pastikan path gambar benar */
+}
+
+.name, .binti, .bapak {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
 .title h2{
     margin-top: 15px;
 }
@@ -229,20 +253,41 @@ label.content::before{
 }
 
 .bank,
-.qris{
+.qris {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
-    min-width: 530px;
-    max-width: 800px;
+    max-width: 800px; /* Tetap membatasi ukuran maksimal di layar besar */
     min-height: 590px;
+    margin: 0 auto; /* Menjadikan elemen terpusat di layar besar */
+    box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran total */
 }
-.qris img{
-    width: auto;
-    max-width: 800px;
+
+.qris img {
+    width: 100%;
+    max-width: 700px; /* Gambar tidak akan lebih besar dari ini */
     max-height: 520px;
+    height: auto; /* Membuat gambar tetap proporsional */
+    display: block;
+    margin: 0 auto; /* Memusatkan gambar */
+}
+
+@media (max-width: 768px) {
+    .bank,
+    .qris {
+        padding: 15px;
+        min-width: unset; /* Hilangkan batas minimal lebar untuk layar kecil */
+        min-height: unset; /* Hilangkan batas minimal tinggi untuk layar kecil */
+    }
+
+    .qris img {
+        max-width: 100%; /* Sesuaikan gambar dengan lebar kontainer */
+        max-height: 100%; /* Sesuaikan tinggi gambar dengan layar kecil */
+    }
+}
+
 }
 
 .fa-copy{
