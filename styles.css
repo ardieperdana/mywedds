@@ -1,179 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #e6dac5;
-    color: #3e2f28;
-    overflow-x: hidden;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital@400&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #e6dac5;
     color: #3e2f28;
     overflow-x: hidden;
 }
 
-.script-header {
-    font-family: 'Dancing Script', cursive;
-    font-size: 36px;
-    color: #6b4e4e;
-    margin-bottom: 20px;
-}
-
-/* Existing styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.section img {
-    max-width: 90%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.hero-text h1 {
-    font-family: 'Playfair Display', serif;
+h1, .hero-text {
+    font-family: 'Lobster', cursive;
     font-size: 60px;
-    line-height: 1.2;
-    margin: 0;
-    display: inline-block;
-}
-
-.hero-text h1 span {
-    display: block;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    margin-top: -10px;
-}
-
-.quran-quote {
-    font-style: italic;
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    max-width: 600px;
-}
-
-
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.hero-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin: 0;
-}
-
-.hero-text span {
-    font-size: 24px;
-    display: block;
-}
-
-.quran-quote {
-    font-style: italic;
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    max-width: 600px;
-}
-
-
-.hero {
-    position: relative;
-    height: 60vh;
-    background-image: url('1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 60px;
-    font-weight: bold;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px);
@@ -181,56 +19,11 @@ body {
     animation: fadeInUp 1s ease-out forwards;
 }
 
-@keyframes fadeInUp {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.section.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Other styles remain the same */
-
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #e6dac5;
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
     color: #3e2f28;
-    overflow-x: hidden;
-}
-
-.hero {
-    position: relative;
-    text-align: center;
-    height: 50vh;
-    background-image: url('1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text {
-    font-size: 48px;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px 30px;
-    border-radius: 8px;
 }
 
 .section {
@@ -255,18 +48,20 @@ body {
     transform: scale(1.05);
 }
 
-.section img {
-    max-width: 90%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.signature, .quran-quote {
+    font-family: 'Dancing Script', cursive;
 }
 
 .signature {
-    font-family: 'Dancing Script', cursive;
     font-size: 30px;
     margin-bottom: 10px;
+}
+
+.quran-quote {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .date {
@@ -275,14 +70,71 @@ body {
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #3e2f28;
+.hero {
+    position: relative;
+    height: 60vh;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .section.reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
-	
+
+.slideshow-container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+    position: absolute;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.fade {
+    animation: fadeAnimation 1.5s infinite;
+}
+
+@keyframes fadeAnimation {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
