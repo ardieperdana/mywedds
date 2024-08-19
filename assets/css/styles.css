@@ -202,25 +202,11 @@ label.content::before{
 {
     width: 100%; 
 }
-
 .event h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 24px; /* Anda bisa menyesuaikan ukuran font sesuai keinginan */
     font-weight: 700; /* Gunakan font-weight untuk menentukan ketebalan font */
     margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
-}
-
-.event-maps {
-    width: 100%;
-    max-width: 600px; /* Maksimum lebar iframe di PC */
-    margin: 0 auto; /* Mengatur posisi iframe ke tengah */
-}
-
-.event-maps iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; /* Mempertahankan rasio aspek 16:9 untuk peta */
-    border: 0;
 }
 
 
@@ -310,4 +296,54 @@ label.content::before{
 }
 @media (min-width: 1200px) {
 
+}
+
+
+.section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.parallax {
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Adjust padding as needed */
+    color: #fff; /* Adjust text color for contrast */
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+
+.event p {
+    font-size: 18px;
+}
+
+.event-maps {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; /* Maksimum lebar iframe di PC */
+    margin: 0 auto; /* Mengatur posisi iframe ke tengah */
+}
+
+.event-maps iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mempertahankan rasio aspek 16:9 untuk peta */
+    border: 0;
+}
+
+
+iframe {
+    max-width: 100%;
+    border: 0;
 }
