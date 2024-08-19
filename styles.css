@@ -123,7 +123,17 @@ p {
     background-color: #ff9aa2;
     text-align: center;
     padding: 50px 0;
+    position: relative;
+    z-index: 2;
+    clear: both; /* Ensure it clears any floating elements */
 }
+.container {
+    width: 100%; /* Ensure it takes full width */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 
 .intro h2 {
     color: #fff;
