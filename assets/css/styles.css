@@ -185,13 +185,6 @@ label.content::before{
     margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
 }
 
-.transfer .flex .info .bank,
-.transfer .flex .info .qris,
-{
-    min-height: 300px;
-    width: 50%;
-}
-
 .label .list-group .list-group-item{
     cursor: pointer !important;
 }
@@ -214,13 +207,16 @@ label.content::before{
     border-bottom: none;
 }
 
-.bank {
+.bank,
+.qris{
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
+    min-width: 530px;
     max-width: 800px;
+    min-height: 590px;
 }
 
 .fa-copy{
