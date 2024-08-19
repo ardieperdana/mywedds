@@ -88,8 +88,8 @@ h2 {
     inset: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
     display: flex;
+    align-items: flex-end;
     justify-content: center;
-    align-items: center;
     text-align: center;
     color: white;
     padding: 20px;
@@ -168,15 +168,9 @@ label.content::before{
     background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
     padding: 10px; /* Opsional: Tambahan padding agar konten lebih nyaman dibaca */
     border-radius: 8px; /* Opsional: Membuat sudut kotak lebih lembut */
-<<<<<<< HEAD
-    margin-bottom: 0px; /* Jarak antar event */
-	width: 80%
-	
-=======
     margin-bottom: 10px; /* Jarak antar event */
 	width: 100%;
     min-height: 180px;
->>>>>>> origin/master
 }
 
 .transfer .flex .label,
@@ -192,7 +186,6 @@ label.content::before{
     margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
 }
 
-<<<<<<< HEAD
 .event-maps {
     width: 100%;
     max-width: 600px; /* Maksimum lebar iframe di PC */
@@ -213,9 +206,6 @@ label.content::before{
     min-height: 300px;
     width: 50%;
 }
-
-=======
->>>>>>> origin/master
 .label .list-group .list-group-item{
     cursor: pointer !important;
 }
