@@ -218,6 +218,11 @@ label.content::before{
     max-width: 800px;
     min-height: 590px;
 }
+.qris img{
+    width: auto;
+    max-width: 800px;
+    max-height: 520px;
+}
 
 .fa-copy{
     cursor: pointer;
