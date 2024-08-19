@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #e6dac5;
+    background-color: #e6dac5 !important;
     color: #3e2f28;
     overflow-x: hidden;
 }
@@ -114,22 +114,9 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.mySlides {
-    display: none;
-    position: absolute;
+.waktu-lokasi {
+/*    background-image: url('../../media/1.jpg');*/
 }
-
-.mySlides img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-}
-
-.fade {
-    animation: fadeAnimation 1.5s infinite;
-}
-
 @keyframes fadeAnimation {
     0%, 100% {
         opacity: 0;
@@ -137,6 +124,10 @@ h2 {
     50% {
         opacity: 1;
     }
+}
+
+label.content::before{
+
 }
 
 .title h2{
@@ -158,6 +149,23 @@ h2 {
 
 .flex-reverse{
     flex-direction: row-reverse;
+}
+.flex .event {
+    padding-top: 10px;
+}
+
+.flex .info div{
+    width: 50%;
+}
+
+.transfer .flex .label,
+.transfer .flex .info,
+{
+    width: 50%;
+}
+
+.label .list-group .list-group-item{
+    cursor: pointer !important;
 }
 
 @media (max-width: 768px) {
