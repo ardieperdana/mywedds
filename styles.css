@@ -37,6 +37,7 @@
 .photo {
     position: absolute; /* Menempatkan foto secara absolut di dalam header */
     top: 50%; /* Menyusun foto di tengah-tengah secara vertikal */
+    right: 0px; /* Jarak dari tepi kanan */
     transform: translateY(-50%); /* Menyelaraskan foto secara vertikal di tengah */
     z-index: 1; /* Menempatkan foto di bawah teks */
 }
@@ -44,7 +45,7 @@
 .photo img {
     width: 768px; /* Ukuran foto */
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /* Media query untuk tampilan mobile */
