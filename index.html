@@ -38,18 +38,22 @@
 
 <div class="section reveal" id="moment">
     <h2>Moment</h2>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="media/1.jpg" alt="Moment 1">
-        </div>
-        <div class="mySlides fade">
-            <img src="media/2.jpg" alt="Moment 2">
-        </div>
-        <div class="mySlides fade">
-            <img src="media/3.jpg" alt="Moment 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="media/4.jpg" alt="Moment 4">
+    <div class="owl-carousel orl-theme owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+            <div class="owl-stage">
+                <div class="owl-item" style="width:235px; margin-right:10px;">
+                    <img src="media/1.jpg" alt="Moment 1">
+                </div>
+                <div class="owl-item" style="width:235px; margin-right:10px;">
+                    <img src="media/2.jpg" alt="Moment 2">
+                </div>
+                <div class="owl-item" style="width:235px; margin-right:10px;">
+                    <img src="media/3.jpg" alt="Moment 3">
+                </div>
+                <div class="owl-item" style="width:235px; margin-right:10px;">
+                    <img src="media/4.jpg" alt="Moment 4">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -66,5 +70,17 @@
   integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
   crossorigin="anonymous"></script>
 <script src="assets/owlcarousel/dist/owl.carousel.min.js"></script>
+
+<script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:1000,
+        autoplayHoverPause:true
+    });
+</script>
 </body>
 </html>
