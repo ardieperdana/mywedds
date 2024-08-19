@@ -13,7 +13,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Nomor rekening berhasil disalin: ' + text);
+            }).catch(err => {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        }
+    </script>
 
     <script src="assets/js/script.js"></script>
     <script
@@ -86,19 +94,21 @@
 <div class="section reveal waktu-lokasi">
     <div class="flex">
         <div class="event">
-            <h3>MARRIAGE CONTRACT</h3>
-            <p>Jumat, 15 Oktober 2021</p>
-            <p class="time">pukul 11:00 WIT - selesai</p>
-            <p>Jalan Kemuning Raya, di Masjid Al Barokah</p>
-        </div>
+        <h3>MARRIAGE CONTRACT</h3>
+        <p>Sun, December 23 2024</p>
+        <p class="time">11:00 AM</p>
+        <p>Jalan Guru</p>
+    </div>
+
+    <div class="event">
+        <h3>RECEPTION</h3>
+        <p>Jumat, 15 Oktober 2021</p>
+        <p class="time">pukul 12:30 WIT - 17:00 WIT</p>
+    </div>
         <div class="event">
-            <h3>RECEPTION</h3>
-            <p>Jumat, 15 Oktober 2021</p>
-            <p class="time">pukul 12:30 WIT - 17:00 WIT</p>
-        </div>
-        <div class="event">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.9240872800938!2d106.83743576894551!3d-6.321146859408447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc1449b695b%3A0xad99f9ac39fc4ae9!2sLenteng%20Agung%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1724066840544!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3965.5552877256723!2d106.83597715078739!3d-6.321992034173053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc16716df25%3A0xbc9677a134aca5a9!2sRPTRA%20Taman%20Lenteng%20Agung!5e0!3m2!1sid!2sid!4v1724082958846!5m2!1sid!2sid" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
     </div>
     <div class="transfer">
         <h2>Kirim Hadiah</h2>
@@ -110,19 +120,33 @@
                 </ul>
             </div>
             <div class="info">
-                <div class="bank">
-                    <p class="date">Kamu bisa transfer ke rekening di bawah ini:
-                        Bank Mandiri
-                        18181818718 
-                        a/n Our Wedding Link
-                        Bank Central Asia (BCA)
-                        28031280318 
-                        a/n Our Wedding Link
-                        Bank Central Asia (BCA)
-                        1234567812 
-                        a/n our wedding
-                    </p>
-                </div>
+    <div class="bank">
+        <p class="date">Kamu bisa transfer ke rekening di bawah ini:</p>
+        <div class="account">
+            <div class="details">
+                <p class="bank-name">Bank Mandiri</p>
+                <p class="account-number">18181818718</p>
+                <p>a/n Our Wedding Link</p>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('18181818718')">Salin</button>
+        </div>
+        <div class="account">
+            <div class="details">
+                <p class="bank-name">Bank Central Asia (BCA)</p>
+                <p class="account-number">28031280318</p>
+                <p>a/n Our Wedding Link</p>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('28031280318')">Salin</button>
+        </div>
+        <div class="account">
+            <div class="details">
+                <p class="bank-name">Bank Central Asia (BCA)</p>
+                <p class="account-number">1234567812 text-align:left</p>
+                <p>a/n our wedding</p>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('1234567812')">Salin</button>
+			</div>
+    </div>
                 <div class="qris" style="display:none;">
                     <p class="date">ini qris
                     </p>
