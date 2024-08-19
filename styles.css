@@ -1,8 +1,87 @@
+.header {
+    position: relative; /* Membuat kontainer header sebagai referensi untuk posisi absolut */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.wrap-title {
+    flex: 1;
+    text-align: left;
+    position: relative; /* Menyediakan konteks posisi untuk anak-anak */
+    z-index: 2; /* Menempatkan teks di atas foto */
+}
+
+.wrap-title h1 {
+    margin: 0;
+    font-size: 3.5em; /* Membuat teks lebih besar */
+}
+
+.wrap-title .name {
+    display: block;
+    margin: 0;
+}
+
+.wrap-title .ampersand {
+    display: block;
+    margin: 0;
+    font-size: 1.5em; /* Sesuaikan dengan ukuran teks lainnya */
+}
+
+.photo {
+    position: absolute; /* Menempatkan foto secara absolut di dalam header */
+    top: 50%; /* Menyusun foto di tengah-tengah secara vertikal */
+    right: 20px; /* Jarak dari tepi kanan */
+    transform: translateY(-50%); /* Menyelaraskan foto secara vertikal di tengah */
+    z-index: 1; /* Menempatkan foto di bawah teks */
+}
+
+.photo img {
+    width: 450px; /* Ukuran foto */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* Pastikan posisi relatif untuk header */
+    }
+
+    .container {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        align-items: center; /* Menyusun elemen secara sentris */
+        text-align: center; /* Mengatur teks menjadi rata tengah */
+    }
+
+    .wrap-title {
+        position: relative; /* Memastikan posisi relatif di dalam header */
+        margin-bottom: 20px; /* Menambahkan jarak bawah untuk memberi ruang bagi foto */
+    }
+
+    .photo {
+        position: absolute; /* Menempatkan foto secara absolut di dalam header */
+        top: 0; /* Menyusun foto di atas konten */
+        right: 0;/* Menyusun foto di sebelah kanan */
+        left: 0;
+        width: 100%; /* Membuat foto menyesuaikan lebar kontainer */
+        max-width: 300px; /* Membatasi lebar maksimum foto */
+        height: auto;
+        transform: none; /* Menyediakan pengaturan default untuk foto */
+    }
+}
+
 /* Global Styles */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f8f8f8;
+    background-color: #0000;
     color: #333;
 }
 
