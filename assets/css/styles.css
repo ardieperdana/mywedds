@@ -163,11 +163,25 @@ label.content::before{
     padding-top: 10px;
 }
 
+.event {
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 10px; /* Opsional: Tambahan padding agar konten lebih nyaman dibaca */
+    border-radius: 8px; /* Opsional: Membuat sudut kotak lebih lembut */
+    margin-bottom: 10px; /* Jarak antar event */
+
 .transfer .flex .label,
 .transfer .flex .info,
 {
     width: 100%;
 }
+
+.event h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px; /* Anda bisa menyesuaikan ukuran font sesuai keinginan */
+    font-weight: 700; /* Gunakan font-weight untuk menentukan ketebalan font */
+    margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
+}
+
 .transfer .flex .info .bank,
 .transfer .flex .info .qris,
 {
