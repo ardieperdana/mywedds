@@ -119,6 +119,11 @@ p {
 }
 
 /* Intro Section */
+.header {
+    position: relative; /* Ensure the header is positioned correctly */
+    z-index: 1; /* Ensure it stacks below the intro section */
+}
+
 .intro {
     background-color: #ff9aa2;
     text-align: center;
