@@ -172,7 +172,7 @@ label.content::before{
 .transfer .flex .label,
 .transfer .flex .info,
 {
-    width: 100%;
+    width: 100%; 
 }
 
 .event h3 {
