@@ -117,9 +117,9 @@ h2 {
 }
 .waktu-lokasi {
     background-image: url('../../media/bg.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed; /* Menambahkan properti ini agar background tidak ikut bergerak */
 }
 
