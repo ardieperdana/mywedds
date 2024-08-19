@@ -168,6 +168,7 @@ label.content::before{
     padding: 10px; /* Opsional: Tambahan padding agar konten lebih nyaman dibaca */
     border-radius: 8px; /* Opsional: Membuat sudut kotak lebih lembut */
     margin-bottom: 10px; /* Jarak antar event */
+	width: 100%
 }
 
 .transfer .flex .label,
