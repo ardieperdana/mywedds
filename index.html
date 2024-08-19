@@ -20,6 +20,7 @@
       integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
       crossorigin="anonymous"></script>
     <script src="assets/owlcarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/28456746ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -83,7 +84,7 @@
 
 
 <div class="section reveal waktu-lokasi">
-    <div class="flex">
+    <div class="flex center">
         <div class="event">
             <h3>MARRIAGE CONTRACT</h3>
             <p>Sun, December 23 2024</p>
@@ -99,10 +100,10 @@
     		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3965.5552877256723!2d106.83597715078739!3d-6.321992034173053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc16716df25%3A0xbc9677a134aca5a9!2sRPTRA%20Taman%20Lenteng%20Agung!5e0!3m2!1sid!2sid!4v1724082958846!5m2!1sid!2sid" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-    
+
     <div class="transfer">
         <h2>Kirim Hadiah</h2>
-        <div class="flex">
+        <div class="flex center">
             <div class="label">
                 <ul class="list-group">
                   <li data-name='bank' class="list-group-item active" aria-current="true">Bank Transfer</li>
@@ -115,26 +116,23 @@
                     <div class="account">
                         <div class="details">
                             <p class="bank-name">Bank Mandiri</p>
-                            <p class="account-number">18181818718</p>
+                            <p class="account-number">18181818718 <i class="fa-regular fa-copy" data-num='18181818718'></i></p>
                             <p>a/n Our Wedding Link</p>
                         </div>
-                        <button class="copy-btn" onclick="copyToClipboard('18181818718')">Salin</button>
                     </div>
                     <div class="account">
                         <div class="details">
                             <p class="bank-name">Bank Central Asia (BCA)</p>
-                            <p class="account-number">28031280318</p>
+                            <p class="account-number">28031280318 <i class="fa-regular fa-copy" data-num='28031280318'></i></p>
                             <p>a/n Our Wedding Link</p>
                         </div>
-                        <button class="copy-btn" onclick="copyToClipboard('28031280318')">Salin</button>
                     </div>
                     <div class="account">
                         <div class="details">
                             <p class="bank-name">Bank Central Asia (BCA)</p>
-                            <p class="account-number">1234567812 text-align:left</p>
+                            <p class="account-number">1234567812 <i class="fa-regular fa-copy" data-num='1234567812'></i></p>
                             <p>a/n our wedding</p>
                         </div>
-                        <button class="copy-btn" onclick="copyToClipboard('1234567812')">Salin</button>
         			</div>
                 </div>
                 <div class="qris" style="display:none;">
@@ -185,6 +183,16 @@
                 $('.info .qris').show()
 
             }
+        })
+
+        $('.fa-copy').click(function(e){
+            navigator.clipboard.writeText($(this).data('num'))
+            $(this).attr('title', 'Copied');
+            $(this).tooltip('show')
+        })
+
+        $('.fa-copy').on('mouseleave', function(e){
+            $(this).attr('title','')
         })
     })
 </script>

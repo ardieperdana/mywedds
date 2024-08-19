@@ -3,6 +3,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #e6dac5 !important;
     color: #3e2f28;
@@ -115,8 +116,12 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .waktu-lokasi {
-/*    background-image: url('../../media/1.jpg');*/
+    background-image: url('../../media/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
 @keyframes fadeAnimation {
     0%, 100% {
         opacity: 0;
@@ -142,6 +147,10 @@ label.content::before{
     justify-content: space-around;
 }
 
+.flex.center{
+    align-items: center;
+}
+
 .flex .title,
 .flex .img{
     width: 50%;
@@ -154,18 +163,51 @@ label.content::before{
     padding-top: 10px;
 }
 
-.flex .info div{
-    width: 50%;
-}
-
 .transfer .flex .label,
 .transfer .flex .info,
 {
     width: 100%;
 }
+.transfer .flex .info .bank,
+.transfer .flex .info .qris,
+{
+    min-height: 300px;
+    width: 50%;
+}
 
 .label .list-group .list-group-item{
     cursor: pointer !important;
+}
+
+.bank .account .details{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.account {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.account:last-child {
+    border-bottom: none;
+}
+
+.bank {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.fa-copy{
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -185,111 +227,3 @@ label.content::before{
 @media (min-width: 1200px) {
 
 }
-
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .bank {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .date {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .account {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .account:last-child {
-            border-bottom: none;
-        }
-
-        .details {
-            flex: 1;
-            min-width: 600px;
-        }
-
-        .details p {
-            margin: 1px 0;
-        }
-
-        .bank-name {
-            font-weight: bold;
-        }
-
-        .account-number {
-            font-family: monospace;
-            margin-bottom: 10px;
-        }
-
-        .copy-btn {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            display: block;
-            width: max-content;
-            margin-top: 5px;
-        }
-
-        .copy-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-
-<style>
-        body {
-            font-family: 'Helvetica', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 20px;
-        }
-        .event {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-            transition: transform 0.2s;
-        }
-        .event:hover {
-            transform: scale(1.02);
-        }
-        h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #007BFF;
-        }
-        p {
-            margin: 5px 0;
-        }
-        .time {
-            font-weight: bold;
-        }
