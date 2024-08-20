@@ -379,12 +379,12 @@ label.content::before{
 
 .parallax {
     position: relative;
-    background-image: url('../../media/bg.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */
+    background-image: url('../../media/bg-hi.jpeg'); /* Gantilah dengan URL gambar yang Anda inginkan */
     background-attachment: fixed; /* Membuat efek parallax */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px; /* Menyesuaikan tinggi sesuai kebutuhan */
+    min-height: 600px; /* Menyesuaikan tinggi sesuai kebutuhan */
     width: 100%;
     display: flex;
     align-items: center;
