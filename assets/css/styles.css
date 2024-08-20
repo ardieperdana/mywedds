@@ -379,7 +379,7 @@ label.content::before{
 
 .parallax {
     position: relative;
-    background-image: url('../../media/bg-hi.jpeg'); /* Gantilah dengan URL gambar yang Anda inginkan */
+    background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */
     background-attachment: fixed; /* Membuat efek parallax */
     background-position: center;
     background-repeat: no-repeat;
