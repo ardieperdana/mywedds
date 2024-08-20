@@ -1,6 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+@font-face {
+    font-family: 'Astagina Signature'; /* Name your font */
+    src: url('../font/Astagina Signature.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Autography'; /* Name your font */
+    src: url('../font/Autography.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bestina Signature'; /* Name your font */
+    src: url('../font/Bestina Signature.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HeavenFaith'; /* Name your font */
+    src: url('../font/HeavenFaith.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,8 +51,8 @@ h1, .hero-text {
 }
 
 h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 32px;
+    font-family: 'HeavenFaith', cursive;
+    font-size: 52px;
     margin-bottom: 20px;
     color: #3e2f28;
 }
@@ -56,8 +84,9 @@ h2 {
 }
 
 .signature {
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 10px;
+	font-weight: bold;
 }
 
 .quran-quote {
@@ -173,42 +202,64 @@ label.content::before{
 
 .title-bride {
     position: relative;
-    background-image: url('../../media/bride.png'); /* Pastikan path gambar benar */
+    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 	opacity:0.5;
     background-size: cover;
-    padding: 20px;
     text-align: center;
     color: #00000; /* Warna teks untuk kontras */
-    margin-bottom: 20px; /* Jarak bawah */
 
     /* Overlay untuk membuat gambar pudar */
 }
 .title-bride h2 {
 	color: #ff0000;
+	font-family: 'Bestina Signature', cursive !important;
     z-index: 2; /* Menempatkan konten di atas overlay */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks dengan offset dan blur */
 }
 
+@media (min-width: 768px) {
+    .title-bride h2 {
+        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */
+        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8); /* Bayangan teks lebih besar untuk desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .title-bride h2 {
+        font-size: 20px !important; /* Ukuran font lebih kecil untuk mobile */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks lebih kecil untuk mobile */
+    }
+}
 
 .title-groom {
 	position: relative;
-    background-image: url('../../media/groom.png'); /* Pastikan path gambar benar */
+    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */
 	background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 	opacity:0.5;
     background-size: cover;
-    padding: 20px;
     text-align: center;
     color: #00000; /* Warna teks untuk kontras */
-    margin-bottom: 20px; /* Jarak bawah */
 }
 
 .title-groom h2 {
 	color: #ff0000;
     z-index: 2; /* Menempatkan konten di atas overlay */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks dengan offset dan blur */
+}
+
+@media (min-width: 768px) {
+    .title-groom h2 {
+        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */
+        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8); /* Bayangan teks lebih besar untuk desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .title-groom h2 {
+        font-size: 20px !important; /* Ukuran font lebih kecil untuk mobile */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks lebih kecil untuk mobile */
+    }
 }
 
 .name, .binti, .bapak {
@@ -221,6 +272,7 @@ label.content::before{
 }
 .title h2.name{
     font-weight: bold;
+	font-family: 'Bestina Signature', cursive;
 }
 
 .flex{
@@ -257,12 +309,6 @@ label.content::before{
 .transfer .flex .info,
 {
     width: 100%; 
-}
-.event h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px; /* Anda bisa menyesuaikan ukuran font sesuai keinginan */
-    font-weight: 700; /* Gunakan font-weight untuk menentukan ketebalan font */
-    margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
 }
 
 .transfer {
@@ -439,6 +485,14 @@ label.content::before{
     position: relative;
 }
 
+@font-face {
+    font-family: 'Astagina Signature';
+    src: url('fonts/astagina-signature.woff2') format('woff2'),
+         url('fonts/astagina-signature.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .parallax {
     position: relative;
     background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */
@@ -472,7 +526,7 @@ label.content::before{
 }
 
 .event h3 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Astagina Signature', cursive; /* Menggunakan font Astagina Signature */
     font-size: 32px;
     margin-bottom: 10px;
     color: #fff; /* Warna teks putih agar kontras dengan background */
@@ -571,3 +625,4 @@ iframe {
     color: #fff;
     cursor: pointer;
 }
+
