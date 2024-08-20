@@ -626,3 +626,34 @@ iframe {
     cursor: pointer;
 }
 
+
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+}
+
+.img-overlay .flex{
+    height: 100%;
+}
+
+.img-overlay .flex .title{
+    width: auto;
+}
+
+.title-cover{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 5em 3em;
+    height: 100%;
+}
+
+.title-cover p{
+    letter-spacing: 10px;
+}
