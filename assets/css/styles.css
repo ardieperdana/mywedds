@@ -526,10 +526,14 @@ label.content::before{
 }
 
 .event h3 {
-    font-family: 'Astagina Signature', cursive; /* Menggunakan font Astagina Signature */
+    font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
     font-size: 32px;
     margin-bottom: 10px;
     color: #fff; /* Warna teks putih agar kontras dengan background */
+}
+
+.event p {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif; /* Ganti dengan nama font yang diinginkan */
 }
 
 .event .date, .event .time {
