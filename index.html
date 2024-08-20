@@ -198,12 +198,11 @@
 
     $(function(){
         const name = getQueryParameter('nama');
+        $('.guest.flex').hide()
         if (name) {
             const greetingMessage = greetUser(name)
             $('.guest.flex').show()
             $('.guest-name').text(greetingMessage)
-        }else{
-            $('.guest.flex').hide()
         }
 
         $('.list-group-item').click(function(e){
