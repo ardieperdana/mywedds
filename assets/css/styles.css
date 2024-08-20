@@ -103,16 +103,16 @@ h2 {
 }
 
 .section.reveal.active {
-    opacity: 1;
+    opacity: 50;
     transform: translateY(0);
 }
 
 .slideshow-container {
     position: relative;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -203,93 +203,148 @@ label.content::before{
     margin-bottom: 10px; /* Opsional: Menambahkan jarak di bawah judul */
 }
 
-
-.transfer .flex .info .bank,
-.transfer .flex .info .qris,
-{
-    min-height: 300px;
-    width: 50%;
-}
-.label .list-group .list-group-item{
-    cursor: pointer !important;
+.transfer {
+    padding: 20px;
+    background: linear-gradient(to right, #f0f0f0, #d9d9d9); /* Gradien latar belakang */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.bank .account .details{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+.transfer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05); /* Overlay semi-transparan */
+    z-index: 1;
 }
-.account {
+
+.transfer .flex {
+    position: relative;
+    z-index: 2;
+}
+
+.label {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    position: relative;
 }
 
-.account:last-child {
-    border-bottom: none;
+.list-group {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-group-item {
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 5px;
+    position: relative;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .bank,
 .qris {
     background-color: #fff;
-    padding: 10px; /* Naikkan sedikit jika terlalu sempit */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 700px;
-    min-height: 590px;
-    margin: 10px auto; /* Mengurangi margin jika perlu */
+    margin: 10px auto;
     box-sizing: border-box;
-
-    /* Penyesuaian teks */
-    font-family: 'Playfair Display', serif;
-    font-size: 18px; /* Mengurangi ukuran font jika diperlukan */
-    line-height: 1; /* Jarak antar baris lebih padat */
-    letter-spacing: 0.2px; /* Sedikit jarak antar huruf */
-    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bank h2,
-.qris h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 24px; /* Mengurangi ukuran font jika diperlukan */
-    margin-bottom: 8px; /* Mengurangi margin bawah */
-    color: #007bff;
+.bank:hover,
+.qris:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.bank .account {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.bank .account:last-child {
+    border-bottom: none;
+}
+
+.bank .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.bank .account-number {
+    font-weight: bold;
+}
 
 .qris img {
     width: 100%;
-    max-width: 100%; /* Membuat gambar menyesuaikan ukuran elemen induknya */
-    max-height: unset; /* Menghapus batas tinggi gambar agar lebih fleksibel */
-    height: auto; /* Membuat gambar tetap proporsional */
+	max-width: 400px; /* Maksimum lebar gambar pada tampilan PC */
+    height: auto;
     display: block;
-    margin: 0 auto; /* Memusatkan gambar */
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
     .bank,
     .qris {
-        padding: 10px; /* Kurangi padding untuk layar kecil */
-        min-height: unset; /* Hilangkan batas minimal tinggi untuk layar kecil */
-        border-radius: 8px; /* Sesuaikan radius sudut untuk layar kecil */
+        padding: 15px;
+        min-height: unset;
+        border-radius: 8px;
     }
 
     .qris img {
-        max-width: 100%; /* Pastikan gambar tetap di dalam batas layar kecil */
-        height: auto; /* Tetap proporsional */
-        max-height: 570px; /* Tentukan batas tinggi untuk gambar pada layar kecil */
+        max-width: 100%;
+        height: auto;
     }
 }
 
-}
-
-.fa-copy{
-    cursor: pointer;
-}
 
 @media (max-width: 768px) {
     .flex .img{
@@ -314,6 +369,8 @@ label.content::before{
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding: 20px; /* Memberikan padding di sekitar konten */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam total lebar */
 }
 
 .reveal {
@@ -327,7 +384,8 @@ label.content::before{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px; /* Anda bisa menyesuaikan tinggi sesuai kebutuhan */
+    height: 600px; /* Menyesuaikan tinggi sesuai kebutuhan */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,44 +397,60 @@ label.content::before{
     z-index: 2;
     text-align: center;
     color: #fff; /* Warna teks putih agar kontras dengan background */
-}
-
-.parallax::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Layer overlay untuk menambah kontras */
-    z-index: 1;
+    padding: 20px; /* Menambahkan padding untuk ruang yang lebih baik */
+    max-width: 90%; /* Membatasi lebar konten */
+    margin: 0 auto; /* Memusatkan konten */
+    background-color: rgba(0, 0, 0, 0.4); /* Layer latar belakang semi-transparan untuk meningkatkan keterbacaan */
+    border-radius: 10px; /* Membuat sudut konten lebih halus */
 }
 
 .event {
     margin-bottom: 20px;
+    padding: 10px; /* Menambahkan padding di dalam elemen event */
+}
+
+.event h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #fff; /* Warna teks putih agar kontras dengan background */
+}
+
+.event .date, .event .time {
+    font-size: 18px;
+    margin: 5px 0;
 }
 
 .event-maps iframe {
     border-radius: 10px; /* Membuat sudut iframe lebih halus */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Menambahkan bayangan untuk kesan kedalaman */
-    margin-top: 20px; /* Menambahkan jarak dari event ke peta */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Menambahkan bayangan untuk kesan kedalaman */
+    width: 100%;
+    max-width: 800px; /* Maksimum lebar iframe untuk tampilan lebih besar */
+    height: 400px; /* Ukuran tinggi iframe */
+    margin-top: 20px; /* Jarak dari elemen di atas */
 }
 
-.event-maps {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 600px; /* Maksimum lebar iframe di PC */
-    margin: 0 auto; /* Mengatur posisi iframe ke tengah */
+@media (max-width: 768px) {
+    .parallax .content {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+        background-color: rgba(0, 0, 0, 0.4); /* Layer latar belakang semi-transparan untuk meningkatkan keterbacaan */
+    }
+
+    .event h3 {
+        font-size: 24px; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .event .date, .event .time {
+        font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .event-maps iframe {
+        height: 300px; /* Mengurangi tinggi iframe pada layar kecil */
+    }
 }
 
-.event-maps iframe {
-    border-radius: 10px; /* Membuat sudut iframe lebih halus */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Menambahkan bayangan untuk kesan kedalaman */
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; /* Mempertahankan rasio aspek 16:9 untuk peta */
-    border: 0;
 }
+
 
 iframe {
     max-width: 100%;
