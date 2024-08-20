@@ -245,11 +245,38 @@ label.content::before{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
-    max-width: 700px; /* Tetap membatasi ukuran maksimal di layar besar */
+    max-width: 700px;
     min-height: 590px;
-    margin: 0 auto; /* Menjadikan elemen terpusat di layar besar */
-    box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran total */
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    /* Penyesuaian teks */
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.4; /* Jarak antar baris lebih padat */
+    letter-spacing: 0.3px; /* Sedikit jarak antar huruf */
+    color: #333;
 }
+
+.bank h2,
+.qris h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+
+/* Menambahkan sedikit gaya pada header */
+.bank h2,
+.qris h2 {
+    font-family: 'Great Vibes', cursive; /* Font yang lebih dekoratif dan indah */
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff; /* Warna biru yang elegan untuk header */
+}
+
+
 
 .qris img {
     width: 100%;
