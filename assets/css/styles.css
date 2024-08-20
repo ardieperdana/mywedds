@@ -235,41 +235,30 @@ label.content::before{
 .bank,
 .qris {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px; /* Naikkan sedikit jika terlalu sempit */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 700px;
     min-height: 590px;
-    margin: 0 auto;
+    margin: 10px auto; /* Mengurangi margin jika perlu */
     box-sizing: border-box;
 
     /* Penyesuaian teks */
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    line-height: 1.4; /* Jarak antar baris lebih padat */
-    letter-spacing: 0.3px; /* Sedikit jarak antar huruf */
+    font-size: 18px; /* Mengurangi ukuran font jika diperlukan */
+    line-height: 1; /* Jarak antar baris lebih padat */
+    letter-spacing: 0.2px; /* Sedikit jarak antar huruf */
     color: #333;
 }
 
 .bank h2,
 .qris h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 24px; /* Mengurangi ukuran font jika diperlukan */
+    margin-bottom: 8px; /* Mengurangi margin bawah */
     color: #007bff;
 }
-
-
-/* Menambahkan sedikit gaya pada header */
-.bank h2,
-.qris h2 {
-    font-family: 'Great Vibes', cursive; /* Font yang lebih dekoratif dan indah */
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #007bff; /* Warna biru yang elegan untuk header */
-}
-
 
 
 .qris img {
@@ -292,7 +281,7 @@ label.content::before{
     .qris img {
         max-width: 100%; /* Pastikan gambar tetap di dalam batas layar kecil */
         height: auto; /* Tetap proporsional */
-        max-height: 400px; /* Tentukan batas tinggi untuk gambar pada layar kecil */
+        max-height: 570px; /* Tentukan batas tinggi untuk gambar pada layar kecil */
     }
 }
 
@@ -327,6 +316,10 @@ label.content::before{
     overflow: hidden;
 }
 
+.reveal {
+    position: relative;
+}
+
 .parallax {
     position: relative;
     background-image: url('../../media/bg.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */
@@ -334,7 +327,7 @@ label.content::before{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px; /* Anda bisa menyesuaikan tinggi sesuai kebutuhan */
+    height: 200px; /* Anda bisa menyesuaikan tinggi sesuai kebutuhan */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,7 +336,7 @@ label.content::before{
 
 .parallax .content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     color: #fff; /* Warna teks putih agar kontras dengan background */
 }
@@ -356,7 +349,7 @@ label.content::before{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Layer overlay untuk menambah kontras */
-    z-index: 0;
+    z-index: 1;
 }
 
 .event {
