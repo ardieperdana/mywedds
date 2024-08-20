@@ -6,6 +6,8 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #e6dac5 !important;
+    background-image: url('../../media/texture-body.png');
+    background-size: cover;
     color: #3e2f28;
     overflow-x: hidden;
 }
@@ -80,10 +82,12 @@ h2 {
 
 .hero {
     position: relative;
-    height: 60vh;
+    height: 800px;
     background-image: url('../../media/1.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
