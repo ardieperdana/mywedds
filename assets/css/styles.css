@@ -61,8 +61,15 @@ h2 {
 .quran-quote {
     font-style: italic;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px; /* Ukuran font default untuk mobile */
     line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .quran-quote {
+        font-size: 28px; /* Ukuran font yang lebih besar untuk desktop */
+    }
+}
 }
 
 .date {
@@ -133,20 +140,71 @@ label.content::before{
 .title-bride, .title-groom {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; /* Atur agar gambar sepenuhnya terlihat */
+    background-size: cover; /* Menyesuaikan gambar agar mengisi elemen */
     padding: 20px;
     text-align: center;
-    color: #808080; /* Opsional: Ubah warna teks agar kontras dengan background */
-    margin-bottom: px; /* Beri jarak antara kedua div */
-	opacity: 0.4; 
+    color: #808080; /* Warna teks untuk kontras */
+    margin-bottom: 20px; /* Jarak bawah */
+    opacity: 0.8; /* Sesuaikan opacity sesuai kebutuhan */
 }
+
+/* Untuk layar tablet dan desktop kecil */
+@media (min-width: 768px) {
+    .title-bride, .title-groom {
+        padding: 30px; /* Tambah padding untuk layar lebih besar */
+        opacity: 0.9; /* Meningkatkan opacity untuk layar yang lebih besar */
+        margin-bottom: 30px; /* Jarak bawah yang lebih besar */
+    }
+}
+
+/* Untuk desktop besar dan layar lebar */
+@media (min-width: 1024px) {
+    .title-bride, .title-groom {
+        padding: 40px; /* Tambah padding untuk desktop besar */
+        opacity: 1; /* Opacity penuh untuk desktop besar */
+        margin-bottom: 40px; /* Jarak bawah yang lebih besar */
+    }
+}
+
 
 .title-bride {
+    position: relative;
     background-image: url('../../media/bride.png'); /* Pastikan path gambar benar */
+    background-repeat: no-repeat;
+    background-position: center;
+	opacity:0.5;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #00000; /* Warna teks untuk kontras */
+    margin-bottom: 20px; /* Jarak bawah */
+
+    /* Overlay untuk membuat gambar pudar */
+}
+.title-bride h2 {
+	color: #ff0000;
+    z-index: 2; /* Menempatkan konten di atas overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks dengan offset dan blur */
 }
 
+
 .title-groom {
+	position: relative;
     background-image: url('../../media/groom.png'); /* Pastikan path gambar benar */
+	background-repeat: no-repeat;
+    background-position: center;
+	opacity:0.5;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #00000; /* Warna teks untuk kontras */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+.title-groom h2 {
+	color: #ff0000;
+    z-index: 2; /* Menempatkan konten di atas overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks dengan offset dan blur */
 }
 
 .name, .binti, .bapak {
