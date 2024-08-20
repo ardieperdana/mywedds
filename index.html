@@ -25,9 +25,13 @@
 <div class="img-overlay">
     <div class="flex center">
         <div class="title-cover flex">
-            <h1 class="title">The Wedding Of</h1>
+            <h1 class="title">The Wedding Of <br>Indra & Ira</h1>
             <div class="open">
-                <h1 class="title">Indra & Ira</h1>
+                <div class="guest-flex">
+                    <div class="title-top">Kepada Yth Bapak/Ibu/Saudara/i</div>
+                    <div class="guest-name"></div>
+                    <div class="title-bot">*mohon maaf apabila ada kesalahan nama dan gelar</div>
+                </div>
                 <hr>
                 <p>17.07.2024</p>
                 <button id="btn-open" class="btn btn-secondary">Buka Undangan</button>
@@ -160,6 +164,17 @@
 
 
 <script>
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Function to greet user
+    function greetUser(name) {
+        name = name.replaceAll('-',' ')
+        return `${name}`;
+    }
+
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
             alert('Nomor rekening berhasil disalin: ' + text);
@@ -181,6 +196,14 @@
 
 
     $(function(){
+        const name = getQueryParameter('nama');
+        $('.guest-flex').hide()
+        if (name) {
+            const greetingMessage = greetUser(name)
+            $('.guest-flex').show()
+            $('.guest-name').text(greetingMessage)
+        }
+
         $('.list-group-item').click(function(e){
             const name = $(this).data('name')
             $('.list-group-item').removeClass('active')
