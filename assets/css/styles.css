@@ -663,7 +663,7 @@ iframe {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    border: 1px dotted black;
+    border: 3px dotted black;
     padding:15px;
 }
 .guest-name{
