@@ -657,3 +657,19 @@ iframe {
 .title-cover p{
     letter-spacing: 10px;
 }
+
+.guest-flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border: 1px dotted black;
+    padding:15px;
+}
+.guest-name{
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+.title-bot{
+    font-size: 10px;
+}
