@@ -34,7 +34,7 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #e6dac5 !important;
-    background-image: url('../../media/texture-body.png');
+/*    background-image: url('../../media/texture-body.png');*/
     background-size: cover;
     color: #3e2f28;
     overflow-x: hidden;
@@ -117,7 +117,7 @@ h2 {
 .hero {
     position: relative;
     height: 800px;
-    background-image: url('../../media/1.jpg');
+/*    background-image: url('../../media/1.jpg');*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -207,7 +207,7 @@ label.content::before{
 
 .title-bride {
     position: relative;
-    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */
+/*    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */*/
     background-repeat: no-repeat;
     background-position: bottom;
 	opacity:0.5;
@@ -239,7 +239,7 @@ label.content::before{
 
 .title-groom {
 	position: relative;
-    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */
+/*    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */*/
 	background-repeat: no-repeat;
     background-position: bottom;
 	opacity:0.5;
@@ -334,7 +334,7 @@ label.content::before{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../media/bg2.png'); /* Ganti dengan URL gambar latar belakang */
+/*    background-image: url('../../media/bg2.png'); /* Ganti dengan URL gambar latar belakang */*/
     background-size: cover;
     background-position: center;
     opacity: 0.7; /* Opacity 70% */
@@ -505,7 +505,7 @@ label.content::before{
 
 .parallax {
     position: relative;
-    background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */
+/*    background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */*/
     background-attachment: fixed; /* Membuat efek parallax */
     background-position: center;
     background-repeat: no-repeat;
