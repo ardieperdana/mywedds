@@ -80,7 +80,7 @@ h2 {
 }
 
 .signature, .quran-quote {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Bestina Signature', cursive;
 }
 
 .signature {
@@ -219,7 +219,7 @@ label.content::before{
 }
 .title-bride h2 {
 	color: #ff0000;
-	font-family: 'Bestina Signature', cursive !important;
+	font-family: 'Dancing Script', cursive !important;
     z-index: 2; /* Menempatkan konten di atas overlay */
 }
 
