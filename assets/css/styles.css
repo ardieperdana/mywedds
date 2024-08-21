@@ -51,7 +51,7 @@ h1, .hero-text {
 }
 
 h2 {
-    font-family: 'HeavenFaith', cursive;
+    font-family: 'Bestina Signature', cursive;
     font-size: 52px;
     margin-bottom: 20px;
     color: #3e2f28;
@@ -97,7 +97,7 @@ h2 {
 .quran-quote {
     font-style: italic;
     margin-top: 20px;
-    font-size: 20px; /* Ukuran font default untuk mobile */
+    font-size: 24px; /* Ukuran font default untuk mobile */
     line-height: 1.5;
 }
 
@@ -212,7 +212,7 @@ label.content::before{
     background-position: bottom;
 	opacity:0.5;
     background-size: cover;
-    text-align: center;
+    text-align: left;
     color: #00000; /* Warna teks untuk kontras */
 
     /* Overlay untuk membuat gambar pudar */
@@ -244,12 +244,13 @@ label.content::before{
     background-position: bottom;
 	opacity:0.5;
     background-size: cover;
-    text-align: center;
+    text-align: right;
     color: #00000; /* Warna teks untuk kontras */
 }
 
 .title-groom h2 {
 	color: #ff0000;
+	font-family: 'Dancing Script', cursive !important;
     z-index: 2; /* Menempatkan konten di atas overlay */
 }
 
@@ -323,6 +324,7 @@ label.content::before{
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
+	 z-index: 1;
 }
 
 .transfer::before {
@@ -336,7 +338,7 @@ label.content::before{
     background-size: cover;
     background-position: center;
     opacity: 0.7; /* Opacity 70% */
-    z-index: 0;
+    z-index: -1;
 }
 
 .transfer .flex {
@@ -587,6 +589,15 @@ iframe {
 
 /*Moment*/
 
+.moment h2 {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #000 !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
 .owl-item img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -692,4 +703,12 @@ iframe {
     background-color: #ffff;
     font-size: 14px;
     color: #6c757d;
+}
+
+.transfer .header {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 40px !important;
+    font-weight: bold !important;
+    text-align: center; /* Opsional, jika ingin teks berada di tengah */
+    margin: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
