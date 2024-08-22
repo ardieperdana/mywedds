@@ -16,6 +16,27 @@
 }
 
 @font-face {
+    font-family: 'Austra Down'; /* Name your font */
+    src: url('../font/Austra Down.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brunch'; /* Name your font */
+    src: url('../font/Brunch.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Madina'; /* Name your font */
+    src: url('../font/Madina.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Bestina Signature'; /* Name your font */
     src: url('../font/Bestina Signature.ttf') format('truetype'); /* Path to your .otf file */
     font-weight: normal;
@@ -41,13 +62,15 @@ body {
 }
 
 h1, .hero-text {
-    font-family: 'Lobster', cursive;
-    font-size: 60px;
-    color: #fff;
+    font-family: 'Austra Down', cursive;
+    font-size: 10px;
+    color: #6482AD;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px);
     opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 2s ease-out forwards;
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
 }
 
 h2 {
@@ -84,9 +107,12 @@ h2 {
 }
 
 .signature {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
 }
 @media (min-width: 1024px) {
     .signature {
@@ -109,9 +135,10 @@ h2 {
 }
 
 .date {
-    font-size: 18px;
-    color: #4f3d2a;
-    margin-bottom: 20px;
+    font-size: 30px;
+    color: #F5EDED;
+    margin-bottom: 5px;
+	text-align: left;
 }
 
 .hero {
@@ -285,6 +312,15 @@ label.content::before{
 	font-family: 'Bestina Signature', cursive;
 }
 
+.om {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
 .flex{
     display: flex;
     justify-content: space-around;
@@ -307,12 +343,23 @@ label.content::before{
 }
 
 .event {
-    background-color: rgba(211, 211, 211, 0.4); /* Warna abu muda dengan opacity 60% */
-    padding: 5px; /* Opsional: Tambahan padding agar konten lebih nyaman dibaca */
-    border-radius: 5px; /* Opsional: Membuat sudut kotak lebih lembut */
-    margin-bottom: 10px; /* Jarak antar event */
-	width: 100%;
-    min-height: 180px;
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 15px; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 15px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
+}
+
+.event-location {
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 5px !important; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 0px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px !important; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
 }
 
 .transfer .flex .label,
@@ -399,6 +446,8 @@ label.content::before{
     margin: 5px fixed;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: left;
+	min-height: 500px;
 }
 
 .bank:hover,
@@ -505,6 +554,15 @@ label.content::before{
     font-style: normal;
 }
 
+.dtv {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
 .parallax {
     position: relative;
 /*    background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */*/
@@ -539,7 +597,7 @@ label.content::before{
 
 .event h3 {
     font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: #fff; /* Warna teks putih agar kontras dengan background */
 }
@@ -593,11 +651,12 @@ iframe {
 
 .moment h2 {
     font-family: 'Bestina Signature', cursive !important;
-    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #000 !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+}
 }
 
 .owl-item img {
@@ -704,22 +763,23 @@ iframe {
     padding: 20px;
     background-color: #ffff;
     font-size: 14px;
+    font-size: 14px;
     color: #6c757d;
 }
 
-.transfer .header {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 40px !important;
+.transfer {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif;
+    font-size: 15px !important;
     font-weight: bold !important;
     text-align: center; /* Opsional, jika ingin teks berada di tengah */
     margin: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
 
-.dtv h2 {
+.kh {
     font-family: 'Bestina Signature', cursive !important;
-    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #000 !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
