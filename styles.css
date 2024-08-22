@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Astagina Signature'; /* Name your font */
+    src: url('../font/Astagina Signature.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Autography'; /* Name your font */
+    src: url('../font/Autography.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Austra Down'; /* Name your font */
+    src: url('../font/Austra Down.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brunch'; /* Name your font */
+    src: url('../font/Brunch.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Madina'; /* Name your font */
+    src: url('../font/Madina.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bestina Signature'; /* Name your font */
+    src: url('../font/Bestina Signature.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HeavenFaith'; /* Name your font */
+    src: url('../font/HeavenFaith.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    b background-color: rgba(245, 237, 237, 0.4);
+	background-image: url('../../media/texture-body.png');*/
+    background-size: cover;
+    color: #E2DAD6;
+    overflow-x: hidden;
+}
+
+h1, .hero-text {
+    font-family: 'Austra Down', cursive;
+    font-size: 10px;
+    color: #6482AD;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+}
+
+h2 {
+    font-family: 'Bestina Signature', cursive;
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: #6482AD;
+}
+
+.section {
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.section img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+}
+
+.signature, .quran-quote {
+    font-family: 'Bestina Signature', cursive;
+}
+
+.signature {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+@media (min-width: 1024px) {
+    .signature {
+        font-size: 50px; /* Ukuran font yang lebih besar untuk desktop */
+    }
+}
+
+.quran-quote {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 24px; /* Ukuran font default untuk mobile */
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .quran-quote {
+        font-size: 28px; /* Ukuran font yang lebih besar untuk desktop */
+    }
+}
+}
+
+.date {
+    font-size: 30px;
+    color: #F5EDED;
+    margin-bottom: 5px;
+	text-align: left;
+}
+
+.hero {
+    position: relative;
+    height: 800px;
+	background-image: url('../../media/1.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section.reveal.active {
+    opacity: 50;
+    transform: translateY(0);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeAnimation {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+label.content::before{
+
+}
+
+.title-bride, .title-groom {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Menyesuaikan gambar agar mengisi elemen */
+    padding: 20px;
+    text-align: center;
+    color: #e6dac5; /* Warna teks untuk kontras */
+    margin-bottom: 20px; /* Jarak bawah */
+    opacity: 0.8; /* Sesuaikan opacity sesuai kebutuhan */
+}
+
+/* Untuk layar tablet dan desktop kecil */
+@media (min-width: 768px) {
+    .title-bride, .title-groom {
+        padding: 30px; /* Tambah padding untuk layar lebih besar */
+        opacity: 0.9; /* Meningkatkan opacity untuk layar yang lebih besar */
+        margin-bottom: 30px; /* Jarak bawah yang lebih besar */
+    }
+}
+
+/* Untuk desktop besar dan layar lebar */
+@media (min-width: 1024px) {
+    .title-bride, .title-groom {
+        padding: 40px; /* Tambah padding untuk desktop besar */
+        opacity: 1; /* Opacity penuh untuk desktop besar */
+        margin-bottom: 40px; /* Jarak bawah yang lebih besar */
+    }
+}
+
+
+.title-bride {
+    position: relative;
+/*    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */*/
+    background-repeat: no-repeat;
+    background-position: bottom;
+	opacity:1;
+    background-size: cover;
+    text-align: left;
+    color: #6482AD; /* Warna teks untuk kontras */
+
+    /* Overlay untuk membuat gambar pudar */
+}
+
+.title-bride h2 {
+	color: #6482AD;
+	font-family: 'Cinzel', cursive !important;
+    z-index: 2; /* Menempatkan konten di atas overlay */
+}
+
+@media (min-width: 768px) {
+    .title-bride h2 {
+        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */  
+    }
+}
+@media (max-width: 767px) {
+    .title-bride h2 {
+        font-size: 24px !important; /* Ukuran font lebih kecil untuk mobile */  
+    }
+}
+
+.title-groom {
+	position: relative;
+/*    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */*/
+	background-repeat: no-repeat;
+    background-position: bottom;
+	opacity:1;
+    background-size: cover;
+    text-align: right;
+    color: #6482AD; /* Warna teks untuk kontras */
+}
+
+.title-groom h2 {
+	color: #6482AD;
+	font-family: 'Cinzel', cursive !important;
+    z-index: 2; /* Menempatkan konten di atas overlay */
+}
+@media (min-width: 768px) {
+    .title-groom h2 {
+        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */
+    }
+}
+@media (max-width: 767px) {
+    .title-groom h2 {
+        font-size: 24px !important; /* Ukuran font lebih kecil untuk mobile */  
+    }
+}
+
+.name, .bapak {
+    margin: 0px 0;
+    font-size: 24px;
+	
+}
+
+.binti {
+    font-size: 12px; /* Adjust the size as needed */
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 5px; /* Adds space below the text */
+    /* or */
+    padding-bottom: -5px; /* Adds space inside the element */
+
+}
+
+.title h2{
+    margin-top: 15px;
+}
+.title h2.name{
+    font-weight: bold;
+	font-family: 'Bestina Signature', cursive;
+}
+
+.om {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex.center{
+    align-items: center;
+}
+
+.flex .title,
+.flex .img{
+    width: 100%;
+}
+
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+.flex .event {
+    padding-top: 10px;
+}
+
+.event {
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 15px; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 15px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
+}
+
+.event-location {
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 5px !important; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 0px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px !important; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
+}
+
+.transfer .flex .label,
+.transfer .flex .info,
+{
+    width: 100%; 
+}
+
+.transfer {
+    padding: 20px;
+    background: linear-gradient(to right, #f0f0f0, #d9d9d9); /* Gradien latar belakang */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+	z-index: 1;
+}
+
+.transfer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../media/pngegg.png'); /* Ganti dengan URL gambar latar belakang */*/
+    background-size: contain;
+    background-position: center;
+    opacity: 0.4; /* Opacity 70% */
+    z-index: -1;
+}
+
+.transfer .flex {
+    position: relative;
+    z-index: 2;
+}
+
+.label {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.list-group {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-group-item {
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 5px;
+    position: relative;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bank,
+.qris {
+	background-color: rgba(127, 161, 195, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 5px fixed;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: left;
+	min-height: 500px;
+}
+
+.bank:hover,
+.qris:hover {
+    box-shadow: rgba(127, 161, 195, 0.4);
+}
+
+.bank .account {
+    margin-bottom: 10px;
+    padding: 2px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.bank .account:last-child {
+    border-bottom: none;
+}
+
+.bank .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.bank .account-number {
+    font-weight: bold;
+}
+
+.qris img {
+    width: 100%;
+	max-width: 400px; /* Maksimum lebar gambar pada tampilan PC */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .bank,
+    .qris {
+        padding: 15px;
+        min-height: unset;
+        border-radius: 8px;
+    }
+
+    .qris img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .flex .img{
+        width: 90%;
+    }
+    .title h2{
+        font-size: 17px;
+    }
+    .title h2.binti{
+        font-size: 12px;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+
+
+.section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px; /* Memberikan padding di sekitar konten */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam total lebar */
+}
+
+.reveal {
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Astagina Signature';
+    src: url('fonts/astagina-signature.woff2') format('woff2'),
+         url('fonts/astagina-signature.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dtv {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
+.parallax {
+    position: relative;
+/*    background-image: url('../../media/bg-hi.jpg'); /* Gantilah dengan URL gambar yang Anda inginkan */*/
+    background-attachment: fixed; /* Membuat efek parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px; /* Menyesuaikan tinggi sesuai kebutuhan */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #F5EDED; /* Warna teks putih agar kontras dengan background */
+    padding: 20px; /* Menambahkan padding untuk ruang yang lebih baik */
+    max-width: 90%; /* Membatasi lebar konten */
+    margin: 0 auto; /* Memusatkan konten */
+    background-color: rgba(0, 0, 0, 0.4); /* Layer latar belakang semi-transparan untuk meningkatkan keterbacaan */
+    border-radius: 10px; /* Membuat sudut konten lebih halus */
+}
+
+.event {
+    margin-bottom: 20px;
+    padding: 10px; /* Menambahkan padding di dalam elemen event */
+}
+
+.event h3 {
+    font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff; /* Warna teks putih agar kontras dengan background */
+}
+
+.event p {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif; /* Ganti dengan nama font yang diinginkan */
+}
+
+.event .date, .event .time {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.event-maps iframe {
+    border-radius: 10px; /* Membuat sudut iframe lebih halus */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Menambahkan bayangan untuk kesan kedalaman */
+    width: 100%;
+    max-width: 800px; /* Maksimum lebar iframe untuk tampilan lebih besar */
+    height: 400px; /* Ukuran tinggi iframe */
+    margin-top: 20px; /* Jarak dari elemen di atas */
+}
+
+@media (max-width: 768px) {
+    .parallax .content {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+        background-color: rgba(0, 0, 0, 0.4); /* Layer latar belakang semi-transparan untuk meningkatkan keterbacaan */
+    }
+
+    .event h3 {
+        font-size: 24px; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .event .date, .event .time {
+        font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .event-maps iframe {
+        height: 300px; /* Mengurangi tinggi iframe pada layar kecil */
+    }
+}
+
+}
+
+
+iframe {
+    max-width: 100%;
+    border: 0;
+}
+
+/*Moment*/
+
+.moment h2 {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+}
+
+.owl-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owl-item:hover img {
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-item img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay untuk gambar yang diperbesar */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol close */
+.fullscreen-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+}
+
+.img-overlay .flex{
+    height: 100%;
+}
+
+.img-overlay .flex .title{
+    width: auto;
+}
+
+.title-cover{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 5em 3em;
+    height: 100%;
+}
+
+.title-cover p{
+    letter-spacing: 10px;
+}
+
+.guest-flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border: 3px dotted black;
+    padding:15px;
+}
+.guest-name{
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+.title-bot{
+    font-size: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffff;
+    font-size: 14px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.transfer {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    text-align: center; /* Opsional, jika ingin teks berada di tengah */
+    margin: 20px 0; /* Opsional, sesuaikan jarak margin */
+}
+
+.kh {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
