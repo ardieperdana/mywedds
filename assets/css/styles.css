@@ -16,6 +16,27 @@
 }
 
 @font-face {
+    font-family: 'Austra Down'; /* Name your font */
+    src: url('../font/Austra Down.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brunch'; /* Name your font */
+    src: url('../font/Brunch.otf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Madina'; /* Name your font */
+    src: url('../font/Madina.ttf') format('truetype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Bestina Signature'; /* Name your font */
     src: url('../font/Bestina Signature.ttf') format('truetype'); /* Path to your .otf file */
     font-weight: normal;
@@ -33,28 +54,30 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #e6dac5 !important;
-/*    background-image: url('../../media/texture-body.png');*/
+    b background-color: rgba(245, 237, 237, 0.4);
+	background-image: url('../../media/texture-body.png');*/
     background-size: cover;
-    color: #3e2f28;
+    color: #E2DAD6;
     overflow-x: hidden;
 }
 
 h1, .hero-text {
-    font-family: 'Lobster', cursive;
-    font-size: 60px;
-    color: #fff;
+    font-family: 'Austra Down', cursive;
+    font-size: 10px;
+    color: #6482AD;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px);
     opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 2s ease-out forwards;
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
 }
 
 h2 {
     font-family: 'Bestina Signature', cursive;
     font-size: 52px;
     margin-bottom: 20px;
-    color: #3e2f28;
+    color: #6482AD;
 }
 
 .section {
@@ -84,9 +107,12 @@ h2 {
 }
 
 .signature {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
 }
 @media (min-width: 1024px) {
     .signature {
@@ -109,15 +135,16 @@ h2 {
 }
 
 .date {
-    font-size: 18px;
-    color: #4f3d2a;
-    margin-bottom: 20px;
+    font-size: 30px;
+    color: #F5EDED;
+    margin-bottom: 5px;
+	text-align: left;
 }
 
 .hero {
     position: relative;
     height: 800px;
-/*    background-image: url('../../media/1.jpg');*/
+	background-image: url('../../media/1.jpg');*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -181,7 +208,7 @@ label.content::before{
     background-size: cover; /* Menyesuaikan gambar agar mengisi elemen */
     padding: 20px;
     text-align: center;
-    color: #808080; /* Warna teks untuk kontras */
+    color: #e6dac5; /* Warna teks untuk kontras */
     margin-bottom: 20px; /* Jarak bawah */
     opacity: 0.8; /* Sesuaikan opacity sesuai kebutuhan */
 }
@@ -210,30 +237,28 @@ label.content::before{
 /*    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */*/
     background-repeat: no-repeat;
     background-position: bottom;
-	opacity:0.5;
+	opacity:1;
     background-size: cover;
     text-align: left;
-    color: #00000; /* Warna teks untuk kontras */
+    color: #6482AD; /* Warna teks untuk kontras */
 
     /* Overlay untuk membuat gambar pudar */
 }
+
 .title-bride h2 {
-	color: #ff0000;
-	font-family: 'Dancing Script', cursive !important;
+	color: #6482AD;
+	font-family: 'Cinzel', cursive !important;
     z-index: 2; /* Menempatkan konten di atas overlay */
 }
 
 @media (min-width: 768px) {
     .title-bride h2 {
-        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */
-        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8); /* Bayangan teks lebih besar untuk desktop */
+        font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */  
     }
 }
-
 @media (max-width: 767px) {
     .title-bride h2 {
-        font-size: 20px !important; /* Ukuran font lebih kecil untuk mobile */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks lebih kecil untuk mobile */
+        font-size: 24px !important; /* Ukuran font lebih kecil untuk mobile */  
     }
 }
 
@@ -242,35 +267,41 @@ label.content::before{
 /*    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */*/
 	background-repeat: no-repeat;
     background-position: bottom;
-	opacity:0.5;
+	opacity:1;
     background-size: cover;
     text-align: right;
-    color: #00000; /* Warna teks untuk kontras */
+    color: #6482AD; /* Warna teks untuk kontras */
 }
 
 .title-groom h2 {
-	color: #ff0000;
-	font-family: 'Dancing Script', cursive !important;
+	color: #6482AD;
+	font-family: 'Cinzel', cursive !important;
     z-index: 2; /* Menempatkan konten di atas overlay */
 }
-
 @media (min-width: 768px) {
     .title-groom h2 {
         font-size: 50px !important; /* Ukuran font lebih besar untuk desktop */
-        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8); /* Bayangan teks lebih besar untuk desktop */
     }
 }
-
 @media (max-width: 767px) {
     .title-groom h2 {
-        font-size: 20px !important; /* Ukuran font lebih kecil untuk mobile */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Bayangan teks lebih kecil untuk mobile */
+        font-size: 24px !important; /* Ukuran font lebih kecil untuk mobile */  
     }
 }
 
-.name, .binti, .bapak {
-    margin: 10px 0;
-    font-size: 1.1rem;
+.name, .bapak {
+    margin: 0px 0;
+    font-size: 24px;
+	
+}
+
+.binti {
+    font-size: 12px; /* Adjust the size as needed */
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 5px; /* Adds space below the text */
+    /* or */
+    padding-bottom: -5px; /* Adds space inside the element */
+
 }
 
 .title h2{
@@ -279,6 +310,15 @@ label.content::before{
 .title h2.name{
     font-weight: bold;
 	font-family: 'Bestina Signature', cursive;
+}
+
+.om {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
 }
 
 .flex{
@@ -292,7 +332,7 @@ label.content::before{
 
 .flex .title,
 .flex .img{
-    width: 50%;
+    width: 100%;
 }
 
 .flex-reverse{
@@ -304,11 +344,22 @@ label.content::before{
 
 .event {
     background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
-    padding: 10px; /* Opsional: Tambahan padding agar konten lebih nyaman dibaca */
-    border-radius: 8px; /* Opsional: Membuat sudut kotak lebih lembut */
-    margin-bottom: 10px; /* Jarak antar event */
-	width: 100%;
-    min-height: 180px;
+    padding: 15px; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 15px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
+}
+
+.event-location {
+    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
+    padding: 5px !important; /* Tambahan padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut kotak lebih lembut */
+    margin-bottom: 0px; /* Jarak antar event */
+    width: 100%; /* Mengambil lebar penuh dari container */
+    min-height: 200px !important; /* Menambah tinggi minimum untuk konten lebih besar */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
 }
 
 .transfer .flex .label,
@@ -324,7 +375,7 @@ label.content::before{
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
-	 z-index: 1;
+	z-index: 1;
 }
 
 .transfer::before {
@@ -334,10 +385,10 @@ label.content::before{
     left: 0;
     width: 100%;
     height: 100%;
-/*    background-image: url('../../media/bg2.png'); /* Ganti dengan URL gambar latar belakang */*/
-    background-size: cover;
+    background-image: url('../../media/pngegg.png'); /* Ganti dengan URL gambar latar belakang */*/
+    background-size: contain;
     background-position: center;
-    opacity: 0.7; /* Opacity 70% */
+    opacity: 0.4; /* Opacity 70% */
     z-index: -1;
 }
 
@@ -387,26 +438,26 @@ label.content::before{
 
 .bank,
 .qris {
-    background-color: #fff;
+	background-color: rgba(127, 161, 195, 0.4);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 700px;
-    margin: 10px auto;
+    margin: 5px fixed;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: left;
+	min-height: 500px;
 }
 
 .bank:hover,
 .qris:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: rgba(127, 161, 195, 0.4);
 }
 
 .bank .account {
-    margin-bottom: 20px;
-    padding: 10px 0;
+    margin-bottom: 10px;
+    padding: 2px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -466,7 +517,7 @@ label.content::before{
 
 @media (max-width: 768px) {
     .flex .img{
-        width: 70%;
+        width: 90%;
     }
     .title h2{
         font-size: 17px;
@@ -487,7 +538,7 @@ label.content::before{
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 20px; /* Memberikan padding di sekitar konten */
+    padding: 10px; /* Memberikan padding di sekitar konten */
     box-sizing: border-box; /* Memastikan padding termasuk dalam total lebar */
 }
 
@@ -501,6 +552,15 @@ label.content::before{
          url('fonts/astagina-signature.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+.dtv {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
 }
 
 .parallax {
@@ -522,7 +582,7 @@ label.content::before{
     position: relative;
     z-index: 2;
     text-align: center;
-    color: #fff; /* Warna teks putih agar kontras dengan background */
+    color: #F5EDED; /* Warna teks putih agar kontras dengan background */
     padding: 20px; /* Menambahkan padding untuk ruang yang lebih baik */
     max-width: 90%; /* Membatasi lebar konten */
     margin: 0 auto; /* Memusatkan konten */
@@ -537,7 +597,7 @@ label.content::before{
 
 .event h3 {
     font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: #fff; /* Warna teks putih agar kontras dengan background */
 }
@@ -591,11 +651,12 @@ iframe {
 
 .moment h2 {
     font-family: 'Bestina Signature', cursive !important;
-    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #000 !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+}
 }
 
 .owl-item img {
@@ -702,12 +763,13 @@ iframe {
     padding: 20px;
     background-color: #ffff;
     font-size: 14px;
+    font-size: 14px;
     color: #6c757d;
 }
 
-.transfer .header {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 40px !important;
+.transfer {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif;
+    font-size: 15px !important;
     font-weight: bold !important;
     text-align: center; /* Opsional, jika ingin teks berada di tengah */
     margin: 20px 0; /* Opsional, sesuaikan jarak margin */
@@ -722,4 +784,13 @@ iframe {
     width: 100%;
     background-color: black;
     color: white;
+}
+
+.kh {
+    font-family: 'Bestina Signature', cursive !important;
+    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+	font-weight: bold;
+    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    text-align: center !important;
+    margin: 20px 0 !important;
 }
