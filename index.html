@@ -52,6 +52,10 @@
         </div>
     </div>
 
+    <div class="section reveal surprize hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut optio, est ex illum. Eligendi recusandae temporibus totam laboriosam praesentium ea eius, quam libero quis reiciendis laborum nostrum dolor rem.
+    </div>
+
     <div class="section reveal" id="details">
         <p class="signature"> The Bride and The Groom </p>
         <p class="date"></p>
@@ -101,7 +105,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="parallax">
         <div class="content">
@@ -163,12 +166,14 @@
             </div>
         </div>
     </div>
-</div>
 
 	<div class="footer">
-			<p>&copy; 2024 Dibuat sendiri, hasilnya bikin senyum berdua.
-				<br>ps : Supported by Quintal's Programmer <strong>A.Fauzi</strong></p>
+		<p>&copy; 2024 Dibuat sendiri, hasilnya bikin senyum berdua.
+		  <br>ps : Supported by Quintal's Programmer <strong>A.Fauzi</strong>
+        </p>
 	</div>
+</div>
+
 
 <script>
     function getQueryParameter(name) {
@@ -204,11 +209,16 @@
 
     $(function(){
         const name = getQueryParameter('QQ');
+        const closeFriend = getQueryParameter('close')
         $('.guest-flex').hide()
         if (name) {
             const greetingMessage = greetUser(name)
             $('.guest-flex').show()
             $('.guest-name').text(greetingMessage)
+        }
+
+        if (closeFriend) {
+            $('.surprize').removeClass('hidden')
         }
 
         $('.list-group-item').click(function(e){

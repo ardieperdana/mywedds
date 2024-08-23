@@ -712,3 +712,14 @@ iframe {
     text-align: center; /* Opsional, jika ingin teks berada di tengah */
     margin: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
+
+.hidden{
+    display: none !important;
+}
+
+.surprize{
+    min-height: 300px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
