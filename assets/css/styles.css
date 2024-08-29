@@ -232,7 +232,7 @@ section.secondary-pane .pane {
 
 .hero {
     position: relative;
-    height: 100vh;
+    height: 800px;
 	background-image: url('../../media/1.jpg');*/
     background-size: cover;
     background-position: center;
@@ -755,6 +755,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
+    .hero,
     .section.reveal.active{
         height: 100vh;
     }
