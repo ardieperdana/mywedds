@@ -146,11 +146,9 @@
                     <div class="transfer">
                         <h2 class="kh">Kirim Hadiah</h2>
                         <div class="flex center">
-                            <div class="label">
-                                <ul class="list-group">
-                                    <li data-name='bank' class="list-group-item active" aria-current="true">Bank Transfer</li>
-                                    <li data-name='qris' class="list-group-item">Qris</li>
-                                </ul>
+                            <div class="label flex">
+                                <div class="item active" data-name='bank'>Bank Transfer</div>
+                                <div class="item" data-name='qris'>Qris</div>
                             </div>
                             <div class="info">
                                 <div class="bank">
@@ -178,8 +176,8 @@
                                     </div>
                                 </div>
                                 <div class="qris" style="display:none;">
-                                    <img src="media/qris.jpg" alt="QRIS">
-                                    <a href="media/qris.jpg" download class="download-btn">Download QRIS</a>
+                                    <img src="media/qris2.jpg" alt="QRIS">
+                                    <a href="media/qris2.jpg" download class="download-btn">Download QRIS</a>
                                 </div>
                             </div>
                         </div>
@@ -248,9 +246,9 @@
             $('.surprize').removeClass('hidden')
         }
 
-        $('.list-group-item').click(function(e){
+        $('.label .item').click(function(e){
             const name = $(this).data('name')
-            $('.list-group-item').removeClass('active')
+            $('.label .item').removeClass('active')
             $(this).toggleClass('active')
             if (name == 'bank') {
                 $('.info .bank').show()

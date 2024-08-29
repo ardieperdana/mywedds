@@ -224,7 +224,7 @@ section.secondary-pane .pane {
 
 
 .date {
-    font-size: 30px;
+    font-size: 18px;
     color: #F5EDED;
     margin-bottom: 5px;
 	text-align: left;
@@ -444,11 +444,25 @@ label.content::before{
 .transfer .flex {
     position: relative;
     z-index: 2;
+    flex-wrap: wrap;
 }
 
 .label {
-    margin-bottom: 20px;
     position: relative;
+}
+
+.label.flex .item{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+.label.flex .item.active{
+    border-radius: 7px 7px 0 0;
+    background-color: rgba(127, 161, 195, 0.4);
 }
 
 .list-group {
@@ -490,13 +504,11 @@ label.content::before{
 	background-color: rgba(127, 161, 195, 0.4);
     padding: 20px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 700px;
-    margin: 5px fixed;
+    max-width: 425px;
+	max-height: 475px;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 	text-align: left;
-	min-height: 500px;
 }
 
 .bank:hover,
@@ -525,8 +537,9 @@ label.content::before{
 
 .qris img {
     width: 100%;
-	max-width: 400px; /* Maksimum lebar gambar pada tampilan PC */
+	max-width: 440px; /* Maksimum lebar gambar pada tampilan PC */
     height: auto;
+    max-height: 460px;
     display: block;
     margin-bottom: 10px;
 }
@@ -756,6 +769,10 @@ iframe {
     section.secondary-pane .pane{
         width: 100%;
         max-width: 100%;
+    }
+
+    .date {
+        font-size: 16px;
     }
 
     .bank,
