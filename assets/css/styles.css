@@ -232,7 +232,7 @@ section.secondary-pane .pane {
 
 .hero {
     position: relative;
-    height: 800px;
+    height: 100vh;
 	background-image: url('../../media/1.jpg');*/
     background-size: cover;
     background-position: center;
@@ -754,7 +754,17 @@ iframe {
     margin: 20px 0 !important;
 }
 
+.title-mobile{
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .title-mobile{
+        display: block;
+    }
+    .title-desktop{
+        display: none;
+    }
     .hero,
     .section.reveal.active{
         height: 100vh;
