@@ -420,13 +420,22 @@ label.content::before{
 .transfer {
     padding: 20px;
     background: linear-gradient(to right, #f0f0f0, #d9d9d9); /* Gradien latar belakang */
-    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
 	z-index: 1;
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    text-align: center; /* Opsional, jika ingin teks berada di tengah */
+    padding: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
 
+.date-time{
+    background: linear-gradient(to right, #f5eded, #e2dad6);
+}
+
+.date-time::before,
 .transfer::before {
     content: "";
     position: absolute;
@@ -723,14 +732,6 @@ iframe {
     font-size: 14px;
     font-size: 14px;
     color: #6c757d;
-}
-
-.transfer {
-    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI', sans-serif;
-    font-size: 15px !important;
-    font-weight: bold !important;
-    text-align: center; /* Opsional, jika ingin teks berada di tengah */
-    margin: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
 
 .hidden{
