@@ -411,6 +411,12 @@ label.content::before{
     box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
 }
 
+
+
+.date-time{
+    background: linear-gradient(to right, #f5eded, #e2dad6);
+}
+
 .transfer .flex .label,
 .transfer .flex .info,
 {
@@ -431,10 +437,7 @@ label.content::before{
     padding: 20px 0; /* Opsional, sesuaikan jarak margin */
 }
 
-.date-time{
-    background: linear-gradient(to right, #f5eded, #e2dad6);
-}
-
+.moment::before,
 .date-time::before,
 .transfer::before {
     content: "";
@@ -663,6 +666,9 @@ iframe {
 }
 
 /*Moment*/
+.moment{
+    background: linear-gradient(to right, #f0f0f0, #d9d9d9); /* Gradien latar belakang */
+}
 
 .moment h2 {
     font-family: 'Bestina Signature', cursive !important;
