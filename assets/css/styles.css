@@ -206,6 +206,13 @@ section.secondary-pane .pane {
     font-family: 'Suravaram', cursive;
 }
 
+.quran-quote {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 8px; !important; /* Ukuran font default untuk mobile */
+    line-height: 0.9;
+}
+
 .signature {
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
@@ -215,12 +222,7 @@ section.secondary-pane .pane {
     margin: 20px 0 !important;
 }
 
-.quran-quote {
-    font-style: italic;
-    margin-top: 20px;
-    font-size: 12px; /* Ukuran font default untuk mobile */
-    line-height: 0.9;
-}
+
 
 .date {
     font-size: 18px;
