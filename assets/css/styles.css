@@ -63,7 +63,7 @@ body {
 
 h1, .hero-text {
     font-family: 'Austra Down', cursive;
-    font-size: 10px;
+    font-size: 18px;
     color: #6482AD;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px);
@@ -203,7 +203,7 @@ section.secondary-pane .pane {
 }
 
 .signature, .quran-quote {
-    font-family: 'Bestina Signature', cursive;
+    font-family: 'Suravaram', cursive;
 }
 
 .signature {
@@ -218,14 +218,21 @@ section.secondary-pane .pane {
 .quran-quote {
     font-style: italic;
     margin-top: 20px;
-    font-size: 24px; /* Ukuran font default untuk mobile */
-    line-height: 1.5;
+    font-size: 12px; /* Ukuran font default untuk mobile */
+    line-height: 0.9;
 }
-
 
 .date {
     font-size: 18px;
-    color: #F7D1D1;
+    color: #E3C26D;
+    margin-bottom: 5px;
+	text-align: left;
+}
+
+.pengiriman {
+	font-family: 'roboto', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
     margin-bottom: 5px;
 	text-align: left;
 }
@@ -609,7 +616,7 @@ label.content::before{
 .parallax .content {
     z-index: 2;
     text-align: center;
-    color: #F5EDED; /* Warna teks putih agar kontras dengan background */
+    color: #4B3C3B; /* Warna teks putih agar kontras dengan background */
     padding: 20px; /* Menambahkan padding untuk ruang yang lebih baik */
     border-radius: 10px; /* Membuat sudut konten lebih halus */
     display: flex;
@@ -629,7 +636,7 @@ label.content::before{
     font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
     font-size: 50px;
     margin-bottom: 10px;
-    color: #fff; /* Warna teks putih agar kontras dengan background */
+    color: #E3C26D; /* Warna teks putih agar kontras dengan background */
 }
 
 .event p {
