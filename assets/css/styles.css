@@ -63,8 +63,7 @@ body {
 
 h1, .hero-text {
     font-family: 'Austra Down', cursive;
-    font-size: 18px;
-    color: #6482AD;
+    font-size: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px);
     opacity: 0;
@@ -77,7 +76,7 @@ h2 {
     font-family: 'Bestina Signature', cursive;
     font-size: 52px;
     margin-bottom: 20px;
-    color: #6482AD;
+    color: #003366;
 }
 
 .body-container{
@@ -209,15 +208,22 @@ section.secondary-pane .pane {
 .quran-quote {
     font-style: italic;
     margin-top: 20px;
-    font-size: 8px; !important; /* Ukuran font default untuk mobile */
+    font-size: 20px; /* Ukuran font default untuk mobile */
     line-height: 0.9;
 }
+
+
+
+
+
+
+
 
 .signature {
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
@@ -226,7 +232,7 @@ section.secondary-pane .pane {
 
 .date {
     font-size: 18px;
-    color: #E3C26D;
+    color: #003366;
     margin-bottom: 5px;
 	text-align: left;
 }
@@ -374,7 +380,7 @@ label.content::before{
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
@@ -596,7 +602,7 @@ label.content::before{
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
@@ -635,10 +641,10 @@ label.content::before{
 }
 
 .event h3 {
-    font-family: 'Bestina Signature', cursive; /* Menggunakan font Astagina Signature */
+    font-family: 'Corinthia', cursive; /* Menggunakan font Astagina Signature */
     font-size: 50px;
     margin-bottom: 10px;
-    color: #E3C26D; /* Warna teks putih agar kontras dengan background */
+    color: #6482AD; /* Warna teks putih agar kontras dengan background */
 }
 
 .event p {
@@ -670,7 +676,7 @@ iframe {
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
@@ -752,7 +758,7 @@ iframe {
     font-family: 'Bestina Signature', cursive !important;
     font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
-    color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+    color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
 }
@@ -774,6 +780,11 @@ iframe {
     .hero{
         height: 100vh;
     }
+	
+	.h1{
+		font-size: 30px;
+	}	
+	
     .img-overlay{
         width: 100vw;
         height: 100vh;
@@ -793,6 +804,9 @@ iframe {
     .date {
         font-size: 16px;
     }
+	
+	.quran-quote {
+		font-size: 18px;
 
     .bank,
     .qris {
@@ -824,7 +838,7 @@ iframe {
     }
 
     .event h3 {
-        font-size: 24px; /* Mengurangi ukuran font pada layar kecil */
+        font-size: 34px; /* Mengurangi ukuran font pada layar kecil */
     }
 
     .event .date, .event .time {
