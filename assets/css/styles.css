@@ -208,6 +208,7 @@ section.secondary-pane .pane {
 .quran-quote {
     font-style: italic;
     margin-top: 20px;
+	margin-bottom: 50px;
     font-size: 20px; /* Ukuran font default untuk mobile */
     line-height: 0.9;
 }
