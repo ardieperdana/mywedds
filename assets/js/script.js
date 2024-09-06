@@ -107,13 +107,12 @@ $(function(){
         const value = $(this).val()
         let suffixData = ''
         if (name) {
-            suffixData = `QQ=${name}`
+            suffixData = `QQ=${encodeURIComponent(name)}`;
         }
 
         if (closeFriend) {
             if (suffixData != '') suffixData += '&';
-            suffixData += `close=${closeFriend}`
-        }
+            suffixData += `close=${encodeURIComponent(closeFriend)}`;
         
         if (dataTranslate.hasOwnProperty(value)) {
             let redirectUrl = dataTranslate[value]
