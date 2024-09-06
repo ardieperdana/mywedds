@@ -84,6 +84,23 @@ h2 {
     display: flex;
 }
 
+nav{
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav img{
+    height: 35px;
+    width: auto;
+}
+
+nav select{
+    width: 70px !important;
+}
+
 section{
     display: block;
     margin:0;

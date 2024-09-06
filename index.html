@@ -61,6 +61,14 @@
                     </div>
                 </div>
                 <div class="content-body" style="display:none;">
+                    <nav class="top-navbar">
+                        <img src="media/trans.png" alt="">
+                        <select id="translate" class="form-select" aria-label="Default select example">
+                          <option value="id" selected>id</option>
+                          <option value="en">en</option>
+                          <option value="ar">ar</option>
+                        </select>
+                    </nav>
                     <div class="hero">
                         <div class="hero-overlay">
                             <div class="hero-text">
@@ -245,6 +253,13 @@
 
 
     $(function(){
+        $(window).scroll(function(){
+            console.log($(window).scrollTop())
+            $('nav').css('filter','invert(0)')
+            if ($(window).scrollTop() < 900) {
+                $('nav').css('filter','invert(1)')
+            }
+        })
         const name = getQueryParameter('QQ');
         const closeFriend = getQueryParameter('close')
         $('.guest-flex').hide()
@@ -257,6 +272,10 @@
         if (closeFriend) {
             $('.surprize').removeClass('hidden')
         }
+
+        $('#translate').change(function(e){
+            console.log($(this).val())
+        })
 
         $('.label .item').click(function(e){
             const name = $(this).data('name')
