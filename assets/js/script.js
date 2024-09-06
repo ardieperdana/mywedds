@@ -150,5 +150,20 @@ $(function(){
     $("#btn-open").click(function(e){
         $('.img-overlay').fadeOut('fast');
         $('.content-body').fadeIn('slow');
+        $('audio').trigger('play')
+    })
+
+    $('#music').click(function(e){
+        $(this).toggleClass('play')
+        $(this).toggleClass('mute')
+
+        if ($(this).hasClass('play')) {
+            $('audio').trigger('play')
+            $(this).attr('src','media/sound.png')
+            $('audio').prop('muted', false)
+        }else{
+            $('audio').prop('muted', true)
+            $(this).attr('src','media/sound-mute.png')
+        }
     })
 })

@@ -60,12 +60,21 @@
                 </div>
                 <div class="content-body" style="display:none;">
                     <nav class="top-navbar">
-                        <img src="media/trans.png" alt="">
-                        <select id="translate" class="form-select" aria-label="Default select example">
-                          <option value="id">id</option>
-                          <option value="en">en</option>
-                          <option value="ar" selected>ar</option>
-                        </select>
+                        <div class="col-left">
+                            <audio autoplay loop>
+                                <source src="media/bgmusic.mp3" type="audio/mpeg">
+                            </audio>
+
+                            <img id="music" class="play" src="media/sound.png" alt="">
+                        </div>
+                        <div class="col-right">
+                            <img src="media/trans.png" alt="">
+                            <select id="translate" class="form-select" aria-label="Default select example">
+                              <option value="id">id</option>
+                              <option value="en">en</option>
+                              <option value="ar" selected>ar</option>
+                            </select>
+                        </div>
                     </nav>
 
                     <div class="hero">
