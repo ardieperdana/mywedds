@@ -217,8 +217,8 @@ section.secondary-pane .pane {
 
 .section {
     padding: 15px;
-    text-align: center;
-    opacity: 0;
+    text-align: left;
+    opacity: 90;
     transform: translateY(20px);
     transition: all 1.3s ease-out;
 }
