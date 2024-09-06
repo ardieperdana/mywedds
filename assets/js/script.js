@@ -112,7 +112,8 @@ $(function(){
 
         if (closeFriend) {
             if (suffixData != '') suffixData += '&';
-            suffixData += `close=${encodeURIComponent(closeFriend)}`;
+            suffixData += `close=${closeFriend}`
+        }
         
         if (dataTranslate.hasOwnProperty(value)) {
             let redirectUrl = dataTranslate[value]
