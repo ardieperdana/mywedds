@@ -46,3 +46,94 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const dataTranslate = {
+    'id' : 'index.html',
+    'ar' : 'index-ar.html',
+    'en' : 'index-en.html',
+}
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Function to greet user
+function greetUser(name) {
+    name = name.replaceAll('-',' ')
+    return `${name}`;
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor rekening berhasil disalin: ' + text);
+    }).catch(err => {
+        console.error('Gagal menyalin teks: ', err);
+    });
+}
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    smartSpeed: 5000,
+    rewind: false
+});
+
+
+$(function(){
+    $(window).scroll(function(){
+        $('nav').css('filter','invert(0)')
+        if ($(window).scrollTop() < 900) {
+            $('nav').css('filter','invert(1)')
+        }
+    })
+
+    $('#translate').change(function(e){
+        const value = $(this).val()
+        if (dataTranslate.hasOwnProperty(value)) {
+            window.location.href = dataTranslate[value]
+        }
+    })
+
+    const name = getQueryParameter('QQ');
+    const closeFriend = getQueryParameter('close')
+    $('.guest-flex').hide()
+    if (name) {
+        const greetingMessage = greetUser(name)
+        $('.guest-flex').show()
+        $('.guest-name').text(greetingMessage)
+    }
+
+    if (closeFriend) {
+        $('.surprize').removeClass('hidden')
+    }
+
+    $('.label .item').click(function(e){
+        const name = $(this).data('name')
+        $('.label .item').removeClass('active')
+        $(this).toggleClass('active')
+        if (name == 'bank') {
+            $('.info .bank').show()
+            $('.info .qris').hide()
+        }else{
+            $('.info .bank').hide()
+            $('.info .qris').show()
+
+        }
+    })
+
+    $('.fa-copy').tooltip()
+
+    $('.fa-copy').click(function(e){
+        navigator.clipboard.writeText($(this).data('num'))
+        $(this).attr('data-bs-original-title', 'Copied');
+        $(this).tooltip('show')
+    })
+
+    $("#btn-open").click(function(e){
+        $('.img-overlay').fadeOut('fast');
+        $('.content-body').fadeIn('slow');
+    })
+})
