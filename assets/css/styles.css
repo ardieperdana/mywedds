@@ -498,10 +498,15 @@ label.content::before{
     position: relative;
     z-index: 2;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .label {
     position: relative;
+}
+
+.label.flex {
+    flex-direction: row;
 }
 
 .label.flex .item{
