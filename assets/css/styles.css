@@ -739,11 +739,17 @@ iframe {
 }
 
 .surprize{
-    min-height: 100px;
+    min-height: 150px;
     width: 100%;
-    background-color: black;
-    color: white;
-    padding: 30px;
+    background-image: url('../../media/bg7.png');
+    color: black;
+    font-weight: bold;
+}
+
+.surprize .flex-text{
+    min-height: 150px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .kh {
