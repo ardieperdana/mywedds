@@ -90,13 +90,6 @@ $(function(){
         }
     })
 
-    $('#translate').change(function(e){
-        const value = $(this).val()
-        if (dataTranslate.hasOwnProperty(value)) {
-            window.location.href = dataTranslate[value]
-        }
-    })
-
     const name = getQueryParameter('QQ');
     const closeFriend = getQueryParameter('close')
     $('.guest-flex').hide()
@@ -109,6 +102,28 @@ $(function(){
     if (closeFriend) {
         $('.surprize').removeClass('hidden')
     }
+
+    $('#translate').change(function(e){
+        const value = $(this).val()
+        let suffixData = ''
+        if (name) {
+            suffixData = `QQ=${name}`
+        }
+
+        if (closeFriend) {
+            if (suffixData != '') suffixData += '&';
+            suffixData += `close=${closeFriend}`
+        }
+        
+        if (dataTranslate.hasOwnProperty(value)) {
+            let redirectUrl = dataTranslate[value]
+
+            if (suffixData != '') {
+                redirectUrl = `${redirectUrl}?${suffixData}`
+            }
+            window.location.href = redirectUrl
+        }
+    })
 
     $('.label .item').click(function(e){
         const name = $(this).data('name')
