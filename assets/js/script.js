@@ -46,11 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const dataTranslate = {
-    'id' : 'index.html',
-    'ar' : 'index-ar.html',
-    'en' : 'index-en.html',
-}
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -61,7 +56,6 @@ function greetUser(name) {
     name = name.replaceAll('-',' ')
     return `${name}`;
 }
-
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         alert('Nomor rekening berhasil disalin: ' + text);
@@ -69,20 +63,25 @@ function copyToClipboard(text) {
         console.error('Gagal menyalin teks: ', err);
     });
 }
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:4,
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true,
-    smartSpeed: 5000,
-    rewind: false
-});
-
 
 $(function(){
+    const dataTranslate = {
+        'id' : 'index.html',
+        'ar' : 'index-ar.html',
+        'en' : 'index-en.html',
+    }
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        smartSpeed: 5000,
+        rewind: false
+    });
     $('nav').css('filter','invert(1)')
     $(window).scroll(function(){
         $('nav').css('filter','invert(1)')
