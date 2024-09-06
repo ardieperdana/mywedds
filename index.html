@@ -247,6 +247,8 @@
     $(function(){
         const name = getQueryParameter('QQ');
         const closeFriend = getQueryParameter('close')
+        console.log(closeFriend)
+        console.log(123)
         $('.guest-flex').hide()
         if (name) {
             const greetingMessage = greetUser(name)
