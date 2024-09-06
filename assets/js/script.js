@@ -83,10 +83,11 @@ owl.owlCarousel({
 
 
 $(function(){
+    $('nav').css('filter','invert(1)')
     $(window).scroll(function(){
-        $('nav').css('filter','invert(0)')
-        if ($(window).scrollTop() < 900) {
-            $('nav').css('filter','invert(1)')
+        $('nav').css('filter','invert(1)')
+        if ($(window).scrollTop() > 900) {
+            $('nav').css('filter','invert(0)')
         }
     })
 
