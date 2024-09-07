@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Klik pada overlay untuk menutup
     overlay.addEventListener('click', (e) => {
-        if (e.target === overlay || e.target === closeButton) {
+        if (e.target === overlay || closeButton.class == e.target.class) {
             overlay.style.display = 'none';
         }
     });

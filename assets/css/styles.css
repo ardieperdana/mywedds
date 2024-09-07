@@ -86,7 +86,7 @@ h2 {
 
 nav{
     position: fixed;
-    z-index: 9999999;
+    z-index: 999;
     width: 100%;
     max-width: 750px;
     display: flex;
