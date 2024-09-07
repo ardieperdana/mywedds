@@ -107,7 +107,7 @@ $(function(){
         const value = $(this).val()
         let suffixData = ''
         if (name) {
-            suffixData = `QQ=${name}`
+            suffixData = `QQ=${encodeURIComponent(name)}`;
         }
 
         if (closeFriend) {
