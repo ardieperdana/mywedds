@@ -726,6 +726,10 @@ iframe {
 
 .owl-item img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: auto; /* Agar gambar memenuhi lebar div */
+    height: 235px; /* Menjaga rasio aspek gambar */
+    max-height: 235px; /* Atur tinggi maksimum sesuai dengan gambar vertikal */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik jika tidak sesuai rasio */
 }
 
 .owl-item:hover img {
