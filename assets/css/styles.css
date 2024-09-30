@@ -70,6 +70,8 @@ h1, .hero-text {
     animation: fadeInUp 2s ease-out forwards;
 	font-weight: bold;
     color: #6482AD !important; /* Sesuaikan warna sesuai kebutuhan */
+	margin-top: 10px; /* Atur jarak atas */
+    position: relative; /* Agar bisa mengatur posisi */
 }
 
 h2 {
@@ -727,11 +729,16 @@ iframe {
 }
 }
 
+.owl-item {
+    width: 300px; /* Lebar tetap untuk setiap item */
+    height: 235px; /* Tinggi tetap untuk setiap item */
+    overflow: hidden; /* Menghindari overflow jika gambar terlalu besar */
+}
+
 .owl-item img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-	width: auto; /* Agar gambar memenuhi lebar div */
-    height: 235px; /* Menjaga rasio aspek gambar */
-    max-height: 235px; /* Atur tinggi maksimum sesuai dengan gambar vertikal */
+	width: 100%; /* Agar gambar memenuhi lebar div */
+    height: 100%; /* Menjaga rasio aspek gambar */
     object-fit: cover; /* Memastikan gambar terpotong dengan baik jika tidak sesuai rasio */
 }
 
