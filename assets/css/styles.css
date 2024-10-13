@@ -54,8 +54,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    b background-color: rgba(245, 237, 237, 0.4);
-	background-image: url('../../media/texture-body.png');*/
+    background-color: rgba(245, 237, 237, 0.4);
+	background-image: url('../../media/texture-body.png');
     background-size: cover;
     color: #E2DAD6;
     overflow-x: hidden;
@@ -337,9 +337,6 @@ section.secondary-pane .pane {
     }
 }
 
-label.content::before{
-
-}
 
 .title-bride, .title-groom {
     background-repeat: no-repeat;
@@ -354,7 +351,7 @@ label.content::before{
 
 .title-bride {
     position: relative;
-/*    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */*/
+/*    background-image: url('../../media/bride2.png'); /* Pastikan path gambar benar */
     background-repeat: no-repeat;
     background-position: bottom;
 	opacity:1;
@@ -373,7 +370,7 @@ label.content::before{
 
 .title-groom {
 	position: relative;
-/*    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */*/
+/*    background-image: url('../../media/groom3.png'); /* Pastikan path gambar benar */
 	background-repeat: no-repeat;
     background-position: bottom;
 	opacity:1;
@@ -459,7 +456,7 @@ label.content::before{
 }
 
 .transfer .flex .label,
-.transfer .flex .info,
+.transfer .flex .info
 {
     width: 100%; 
 }
@@ -486,7 +483,7 @@ label.content::before{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../media/pngegg.png'); /* Ganti dengan URL gambar latar belakang */*/
+    background-image: url('../../media/pngegg.png'); /* Ganti dengan URL gambar latar belakang */
     background-size: contain;
     background-position: center;
     opacity: 0.4; /* Opacity 70% */
@@ -723,7 +720,6 @@ iframe {
     margin: 20px 0 !important;
 	line-height: 0.9;
 }
-}
 
 /* Overlay untuk gambar yang diperbesar */
 .fullscreen-overlay {
@@ -736,7 +732,7 @@ iframe {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 99999999;
 }
 
 .fullscreen-overlay img {
@@ -881,6 +877,7 @@ iframe {
     .title-mobile{
         display: block;
     }
+
     .title-desktop{
         display: none;
     }
@@ -896,9 +893,11 @@ iframe {
         width: 100vw;
         height: 100vh;
     }
+
     section.primary-pane{
         display: none;
     }
+
     section.secondary-pane{
         width: 100%;
         max-width: 100%;
@@ -915,6 +914,8 @@ iframe {
 	.quran-quote {
 		font-size: 18px;
 
+    
+    }
     .bank,
     .qris {
         padding: 15px;
@@ -982,11 +983,6 @@ iframe {
         margin-bottom: 30px; /* Jarak bawah yang lebih besar */
     }
 }
-
-@media (min-width: 992px) {
-
-}
-
 @media (min-width: 1024px) {
     .signature {
         font-size: 50px; /* Ukuran font yang lebih besar untuk desktop */
@@ -997,8 +993,4 @@ iframe {
         opacity: 1; /* Opacity penuh untuk desktop besar */
         margin-bottom: 40px; /* Jarak bawah yang lebih besar */
     }
-}
-
-@media (min-width: 1200px) {
-
 }
