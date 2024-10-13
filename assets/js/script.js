@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.gallery-item img').forEach(img => {
         img.addEventListener('click', () => {
             const src = img.src; // Gunakan gambar yang sama
-            overlay.style.display = 'block';
+            overlay.style.display = 'flex';
             overlay.innerHTML = `
                 <div class="close-btn">×</div>
                 <img src="${src}" alt="${img.alt}">
