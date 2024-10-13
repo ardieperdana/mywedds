@@ -15,6 +15,7 @@ document.addEventListener('scroll', function() {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.createElement('div');
     overlay.classList.add('fullscreen-overlay');

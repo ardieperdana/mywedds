@@ -18,8 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Suravaram&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Chinzel+Decorative&display=swap" rel="stylesheet">
+    
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,37 +123,35 @@
                                 <h2 class="name bapak">Bapak Aris Setiyono<br>&<br>Ibu Nok Darti</h2>
                             </div>
                         </div>
-                        <div class="moment" id="moment">
-                            <h2>Momen Kami</h2>
-                            <div class="owl-carousel orl-theme owl-loaded owl-drag">
-                                <div class="owl-stage-outer">
-                                    <div class="owl-stage">
-                                        <div class="owl-item" style="width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6466.JPG" alt="Moment 1">
-                                        </div>
-                                        <div class="owl-item" style="width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6421.JPG" alt="Moment 2">
-                                        </div>
-                                        <div class="owl-item" style="width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6453.JPG" alt="Moment 3">
-                                        </div>
-                                        <div class="owl-item" style=" width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6571.JPG" alt="Moment 4">
-                                        </div>
-										<div class="owl-item" style="width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6550.JPG" alt="Moment 5">
-                                        </div>
-										<div class="owl-item" style="width:235px; margin-right:10px;">
-                                            <img src="media/IMG_6586.JPG" alt="Moment 6">
-                                        </div>
-                    					<div class="fullscreen-overlay">
-                    					   <div class="close-btn">×</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                       <div class="moment" id="moment">
+							<h2>Momen Kami</h2>
+									<div class="gallery">
+										<div class="gallery-item">
+											<img src="media/IMG_6466.JPG" alt="Moment 1">
+										</div>
+										<div class="gallery-item">
+											<img src="media/IMG_6421.JPG" alt="Moment 2">
+										</div>
+										<div class="gallery-item">
+											<img src="media/IMG_6453.JPG" alt="Moment 3">
+										</div>
+										<div class="gallery-item">
+											<img src="media/IMG_6571.JPG" alt="Moment 4">
+										</div>
+										<div class="gallery-item">
+											<img src="media/IMG_6550.JPG" alt="Moment 5">
+										</div>
+										<div class="gallery-item">
+											<img src="media/IMG_6586.JPG" alt="Moment 6">
+										</div>
+									</div>
+								</div>
+								
+							<div id="imageModal" class="modal">
+								<span class="close">&times;</span>
+								<img class="modal-content" id="modalImage">
+							</div>
+
 
                     <div class="section reveal date-time">
                     	<h2 class="dtv">Tempat, Tanggal, dan Waktu</h2>
@@ -170,11 +169,12 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <div class="event">
-                    				<h3>Lokasi</h3>
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3965.5552877256723!2d106.83597715078739!3d-6.321992034173053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc16716df25%3A0xbc9677a134aca5a9!2sRPTRA%20Taman%20Lenteng%20Agung!5e0!3m2!1sid!2sid!4v1724082958846!5m2!1sid!2sid" style="border:0;width:100vw;height:250px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                            </div>
+								<div class="event">
+        <h3>Lokasi</h3>
+        <a href="https://www.google.com/maps/place/Taman+Pendidikan+Al-qur'an+(TPA)+Ikhlasul+Machfudz/@-6.3198627,106.8378507,15z/data=!4m6!3m5!1s0x2e69edc1d6c944c1:0xadb156ea8ebba493!8m2!3d-6.3198627!4d106.8378507!16s%2Fg%2F11bxnqyk3h" target="_blank">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.5103223035024!2d106.83785068823235!3d-6.319862729081707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc1d6c944c1%3A0xadb156ea8ebba493!2sTaman%20Pendidikan%20Al-qur&#39;an%20(TPA)%20Ikhlasul%20Machfudz!5e0!3m2!1sid!2sid!4v1728792007145!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a>
+    </div>
+							</div>
                         </div>
                     </div>
 
