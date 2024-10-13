@@ -75,7 +75,7 @@ h1, .hero-text {
 }
 
 h2 {
-    font-family: 'Bestina Signature', cursive;
+    font-family: 'Suravaram', cursive;
     font-size: 52px;
     margin-bottom: 20px;
     color: #003366;
@@ -125,7 +125,6 @@ section{
     display: block;
     margin:0;
 }
-
 
 section.wrap-container{
     display: flex;
@@ -255,20 +254,14 @@ section.secondary-pane .pane {
     line-height: 0.9;
 }
 
-
-
-
-
-
-
-
 .signature {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-family: 'Suravaram', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
-    margin: 20px 0 !important;
+    margin: 10px 0 !important;
+	line-height: 0.9;
 }
 
 
@@ -415,16 +408,17 @@ label.content::before{
 }
 .title h2.name{
     font-weight: bold;
-	font-family: 'Bestina Signature', cursive;
+	font-family: 'Suravaram', cursive;
 }
 
 .om {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-family: 'Suravaram', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+	line-height: 0.9;
 }
 
 .flex{
@@ -646,12 +640,13 @@ label.content::before{
 }
 
 .dtv {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-family: 'Suravaram', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+	line-height: 0.9;
 }
 
 .parallax {
@@ -720,42 +715,14 @@ iframe {
 /*Moment*/
 
 .moment h2 {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-family: 'Suravaram', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+	line-height: 0.9;
 }
-}
-
-.owl-item {
-    width: 300px; /* Lebar tetap untuk setiap item */
-    height: 235px; /* Tinggi tetap untuk setiap item */
-    overflow: hidden; /* Menghindari overflow jika gambar terlalu besar */
-}
-
-.owl-item img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-	width: 100%; /* Agar gambar memenuhi lebar div */
-    height: 100%; /* Menjaga rasio aspek gambar */
-    object-fit: cover; /* Memastikan gambar terpotong dengan baik jika tidak sesuai rasio */
-}
-
-.owl-item:hover img {
-    transform: scale(1.15);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.owl-carousel .owl-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.owl-item img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Overlay untuk gambar yang diperbesar */
@@ -777,6 +744,81 @@ iframe {
     max-height: 90%;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout kiri-kanan 2 kolom */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    grid-auto-rows: auto; /* Atur tinggi default untuk baris */
+    gap: 6px; /* Jarak antar elemen */
+	justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Pastikan gambar menyesuaikan tinggi kotak */
+    object-fit: cover; /* Membuat gambar menyesuaikan kotak dengan proporsi yang tetap */
+    cursor: pointer;
+    border-radius: 8px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+}
+
+.gallery-item:nth-child(1) {
+    grid-column: span 2; /* Gambar horizontal menempati dua kolom */
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 2; /* Gambar horizontal menempati dua kolom */
+}
+
+/* Modal styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px;
+	padding-bottom: 60px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styling untuk mobile */
+@media only screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom pada mobile juga */
+    }
+
+    .gallery-item:nth-child(1) {
+        grid-column: span 2; /* Gambar horizontal tetap dua kolom di mobile */
+    }
+	.gallery-item:nth-child(4) {
+        grid-column: span 2; /* Gambar horizontal tetap dua kolom di mobile */
+    }
 }
 
 /* Tombol close */
@@ -817,12 +859,13 @@ iframe {
 }
 
 .kh {
-    font-family: 'Bestina Signature', cursive !important;
-    font-size: 50px !important; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-family: 'Suravaram', cursive !important;
+    font-size: 40px !important; /* Sesuaikan ukuran sesuai kebutuhan */
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
     margin: 20px 0 !important;
+	line-height: 0.9;
 }
 
 .title-mobile{
