@@ -221,7 +221,7 @@ section.secondary-pane .pane {
 
 
 .section {
-    padding: 15px;
+    /* padding: 15px; */
     text-align: left;
     opacity: 90;
     transform: translateY(20px);
@@ -622,7 +622,7 @@ section.secondary-pane .pane {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 10px; /* Memberikan padding di sekitar konten */
+    /* padding: 10px; Memberikan padding di sekitar konten */
     box-sizing: border-box; /* Memastikan padding termasuk dalam total lebar */
 }
 
@@ -971,6 +971,10 @@ iframe {
 }
 
 @media (min-width: 768px) {
+    .event{
+        min-width: auto;
+    }
+    
     .title-groom h2 {
         font-size: 25px !important; /* Ukuran font lebih besar untuk desktop */
     }
