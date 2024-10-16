@@ -14,7 +14,28 @@ document.addEventListener('scroll', function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const targetDate = new Date("December 22, 2024 09:00:00").getTime();
 
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = `
+            <strong>${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik</strong>
+        `;
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "Waktu Telah Tiba!";
+        }
+    }, 1000);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.createElement('div');

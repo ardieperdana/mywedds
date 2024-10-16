@@ -439,18 +439,6 @@ section.secondary-pane .pane {
     padding-top: 10px;
 }
 
-.event-location {
-    background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
-    padding: 5px !important; /* Tambahan padding untuk kenyamanan */
-    border-radius: 8px; /* Sudut kotak lebih lembut */
-    margin-bottom: 0px; /* Jarak antar event */
-    width: 100%; /* Mengambil lebar penuh dari container */
-    min-height: 200px !important; /* Menambah tinggi minimum untuk konten lebih besar */
-    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
-}
-
-
-
 .date-time{
     background: linear-gradient(to right, #f5eded, #e2dad6);
 }
@@ -644,16 +632,16 @@ section.secondary-pane .pane {
 	font-weight: bold;
     color: #003366 !important; /* Sesuaikan warna sesuai kebutuhan */
     text-align: center !important;
-    margin: 20px 0 !important;
+    margin: 50px 0 20px 0 !important;
 	line-height: 0.9;
 }
 
 .parallax {
-    background-attachment: fixed; /* Membuat efek parallax */
+    background-attachment: scroll; /* Membuat efek parallax */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 600px; /* Menyesuaikan tinggi sesuai kebutuhan */
+    min-height: 400px; /* Menyesuaikan tinggi sesuai kebutuhan */
     width: 100%;
     display: flex;
     align-items: center;
@@ -670,7 +658,18 @@ section.secondary-pane .pane {
     border-radius: 10px; /* Membuat sudut konten lebih halus */
     display: flex;
 }
+
+.content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+		flex-direction: row;
+    }
+
 .event {
+	flex: 1;
     background-color: rgba(211, 211, 211, 0.6); /* Warna abu muda dengan opacity 60% */
     padding: 15px; /* Tambahan padding untuk kenyamanan */
     border-radius: 8px; /* Sudut kotak lebih lembut */
@@ -679,7 +678,34 @@ section.secondary-pane .pane {
     min-height: 200px; /* Menambah tinggi minimum untuk konten lebih besar */
     box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
     padding: 10px; /* Menambahkan padding di dalam elemen event */
+	margin-bottom: 0;
 }
+
+.countdown {
+    flex-basis: 100%; /* Mengambil 100% lebar pada baris berikutnya */
+    background-color: rgba(211, 211, 211, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.location {
+    flex: 1; /* Mengatur lebar elemen lokasi agar fleksibel */
+    background-color: rgba(211, 211, 211, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center; /* Atur teks di dalam lokasi agar berada di tengah */
+}
+	
+
+    @media (max-width: 768px) {
+        .event {
+            width: 100%; /* Full width di mobile */
+        }
+    }
 
 .event h3 {
     font-family: 'Cinzel', cursive; /* Menggunakan font Astagina Signature */
@@ -693,7 +719,7 @@ section.secondary-pane .pane {
 }
 
 .event .date, .event .time {
-    font-size: 16px;
+    font-size: 18px;
     margin: 5px 0;
 }
 
