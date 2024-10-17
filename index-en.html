@@ -33,208 +33,212 @@
 </head>
 <body>
 
-<div class="body-container">
-    <section class="wrap-container">
-        <section class="primary-pane">
-            <div class="pane">
-                <h1 class="title"><strong>Devi & Ardie</strong></h1>
-                <div class="background-overlay"></div>
-            </div>
-        </section>
-        <section class="secondary-pane">
-            <div class="pane">
-                <div class="img-overlay">
-                    <div class="flex center">
-                        <div class="title-cover flex">
-                            <h1 class="title"><strong>The Wedding Of</strong><br>Devi & Ardie</h1>
-                            <div class="open">
-                                <div class="guest-flex">
-                                    <div class="title-top">To Mr./Mrs./Brother/Sister</div>
-                                    <div class="guest-name"></div>
-                                    <div class="title-bot">*We apologize for any mistakes in names and titles</div>
-                                </div>
-                                <hr>
-                                <p><strong>12.22.2024</strong></p>
-                                <button id="btn-open" class="btn btn-secondary">Open Invitation</button>
-                            </div>
-                        </div>
-                    </div>
+    <div class="body-container">
+        <section class="wrap-container">
+            <section class="primary-pane">
+                <div class="pane">
+                    <h1 class="title"><strong>Devi & Ardie</strong></h1>
+                    <div class="background-overlay"></div>
                 </div>
-                <div class="content-body" style="display:none;">
-                    <nav class="top-navbar">
-                        <div class="col-left">
-                            <audio autoplay loop>
-                            <source src="media/bgmusic.mp3" type="audio/mpeg">
-                            </audio>
-
-                            <img id="music" class="play" src="media/sound.png" alt="">
-                        </div>
-                        <div class="col-right">
-                            <img src="media/trans.png" alt="">
-                            <select id="translate" class="form-select" aria-label="Default select example">
-                              <option value="id">Indonesia</option>
-                              <option value="en" selected>English</option>
-                              <option value="ar">عربي</option>
-                            </select>
-                        </div>
-                    </nav>
-                    <div class="hero">
-                        <div class="hero-overlay">
-                            <div class="hero-text">
-                                <h1>Devi <span>&</span> Ardie</h1>
-                                <p class="quran-quote">
-                                    "And among His signs is that He created for you wives from among yourselves, that you may find tranquility in them, and He placed between you affection and mercy. Indeed in that are signs for a people who give thought."
-                                </p>
-								<p class="quran-quote" style="text-align: center;">
-								(QS. Ar-Rum: 21)
-								</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section reveal surprize hidden">
-                        <div class="flex-text">
-                            PS : If you can read this, show it to the bridesmaids, because the souvenir will be different, haha!
-                        </div>
-                    </div>
-
-                    <div class="section reveal" id="details">
-                        <p class="signature"> The Bride and The Groom </p>
-
-                        <div class="flex">
-                            <div class="img">
-                                <img src="media/2.jpg" alt="Ira">
-                            </div>
-                            <div class="title-bride">
-                                <h2 class="name">Devi Indrasari</h2>
-                                <p class="binti">the youngest daughter of</p>
-                                <h2 class="name bapak">the late Mr Mudjijanto <br>&<br> Mrs Mujiyem </h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-reverse">
-                            <div class="img">
-                                <img src="media/3.jpg" alt="Ira">
-                            </div>
-                            <div class="title-groom">
-                                <h2 class="name title-desktop">Ardie P Muhammad</h2>
-                                <h2 class="name title-mobile">Ardie Perdana Muhammad</h2>
-                                <p class="binti">the eldest son of</p>
-                                <h2 class="name bapak">Mr Aris Setiyono <br>&<br> Mrs Nok Darti</h2>
-                            </div>
-                        </div>
-                        <div class="moment" id="moment">
-                            <h2>Our Moments</h2>
-                            <div class="gallery">
-								<div class="gallery-item">
-									<img src="media/IMG_6455.JPG" alt="Moment 1">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6421.JPG" alt="Moment 2">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6453.JPG" alt="Moment 3">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6466.JPG" alt="Moment 4">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6586.JPG" alt="Moment 5">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6550.JPG" alt="Moment 6">
-								</div>
-								<div class="gallery-item">
-									<img src="media/IMG_6571.JPG" alt="Moment 7">
-								</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section reveal date-time">
-                    	<h2 class="dtv">Date, Time, and Venue</h2>
-                        <div class="parallax">
-                            <div class="content">
-                                <div class="event">
-                                    <h3>Marriage</h3>
-                                    <p><strong>Sun, December 22 2024</strong></p>
-                                    <p class="time"><strong>9:00 AM</strong></p>
-                                </div>
-                                <div class="event">
-                                    <h3>Reception</h3>
-                                    <p><strong>Sun, December 22 2024</strong></p>
-                                    <p class="time"><strong>11.00 AM - 5.00 PM</strong></p>
-                                </div>
-								<div class="event countdown">
-									<h3>Marriage Countdown</h3>
-									<p id="countdown"></p>
-								</div>
-								<div class="event location"> 
-									<h3>Location</h3>
-									<div style="display: flex; justify-content: center; width: 100%; height: 100%;">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.6964025225227!2d106.8378135!3d-6.3199139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc1ce4914a5%3A0x2f1deef3f5eb0169!2sJl.%20Guru%20No.24%2C%20RT.6%2FRW.2%2C%20Lenteng%20Agung%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012610!5e0!3m2!1sid!2sid!4v1729087906441!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-										<!-- Button in bottom-left corner -->
-										<a href="https://maps.app.goo.gl/az7iLZbq99PNMGPz8" target="_blank" style="position: absolute; bottom: 10px; left: 10px; background: rgba(255, 255, 255, 0.7); color: black; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
-											Open Google Maps
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-                    <!-- Countdown -->
-                    <div id="countdown-container">
-                        <div id="countdown"></div>
-                    </div>
-
-                    <div class="section reveal transfer">
-                        <h2 class="kh">Send Gift</h2>
+            </section>
+            <section class="secondary-pane">
+                <div class="pane">
+                    <div class="img-overlay">
                         <div class="flex center">
-                            <div class="label flex">
-                                <div class="item active" data-name='bank'>Bank Transfer</div>
-                                <div class="item" data-name='qris'>Qris</div>
-                            </div>
-                            <div class="info">
-                                <div class="bank">
-                                    <p class="pengiriman">For gift delivery, you can send to the following address:<br>
-                					<strong><em>Jl. Guru, Gang Ciliwung I, RT 06/02, No. 25, Lenteng Agung</em></strong>
-                					<br><br>You can also transfer to one or all of the bank accounts below:
-                						</p>
-                					<div class="account">
-                                        <div class="details">
-                                            <p class="bank-name">Mandiri in the name of Devi Indrasari</p>
-                                            <p class="account-number"><strong><em>9000017616443</em></strong> <i class="fa-regular fa-copy" data-num='9000017616443' title='Copy'></i></p>
-                                        </div>
+                            <div class="title-cover flex">
+                                <h1 class="title"><strong>The Wedding Of</strong><br>Devi & Ardie</h1>
+                                <div class="open">
+                                    <div class="guest-flex">
+                                        <div class="title-top">To Mr./Mrs./Brother/Sister</div>
+                                        <div class="guest-name"></div>
+                                        <div class="title-bot">*We apologize for any mistakes in names and titles</div>
                                     </div>
-                                    <div class="account">
-                                        <div class="details">
-                                            <p class="bank-name">BCA in the name of Ardie Perdana Muhammad</p>
-                                            <p class="account-number"><strong><em>1650380475</em></strong> <i class="fa-regular fa-copy" data-num='1650380475' title='Copy'></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qris" style="display:none;">
-                                    <img src="media/qris2.jpg" alt="QRIS">
-                                    <a href="media/qris2.jpg" download class="download-btn">Download QRIS</a>
+                                    <hr>
+                                    <p><strong>12.22.2024</strong></p>
+                                    <button id="btn-open" class="btn btn-secondary">Open Invitation</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="content-body" style="display:none;">
+                        <nav class="top-navbar">
+                            <div class="col-left">
+                                <audio autoplay loop>
+                                <source src="media/bgmusic.mp3" type="audio/mpeg">
+                                </audio>
 
-                	<div class="footer">
-                		<p>&copy; 2024 Created by ourselves, the result makes both of us smile.
-                		  <br>ps : Supported by Quintal's Programmer <strong>A.Fauzi</strong>
-                        </p>
-                	</div>
+                                <img id="music" class="play" src="media/sound.png" alt="">
+                            </div>
+                            <div class="col-right">
+                                <img src="media/trans.png" alt="">
+                                <select id="translate" class="form-select" aria-label="Default select example">
+                                  <option value="id">Indonesia</option>
+                                  <option value="en" selected>English</option>
+                                  <option value="ar">عربي</option>
+                                </select>
+                            </div>
+                        </nav>
+                        <div class="hero">
+                            <div class="hero-overlay">
+                                <div class="hero-text">
+                                    <h1>Devi <span>&</span> Ardie</h1>
+                                    <p class="quran-quote">
+                                        "And among His signs is that He created for you wives from among yourselves, that you may find tranquility in them, and He placed between you affection and mercy. Indeed in that are signs for a people who give thought."
+                                    </p>
+    								<p class="quran-quote" style="text-align: center;">
+    								(QS. Ar-Rum: 21)
+    								</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section reveal surprize hidden">
+                            <div class="flex-text">
+                                PS : If you can read this, show it to the bridesmaids, because the souvenir will be different, haha!
+                            </div>
+                        </div>
+
+                        <div class="section reveal" id="details">
+                            <p class="signature"> The Bride and The Groom </p>
+
+                            <div class="flex">
+                                <div class="img">
+                                    <img src="media/2.jpg" alt="Ira">
+                                </div>
+                                <div class="title-bride">
+                                    <h2 class="name">Devi Indrasari</h2>
+                                    <p class="binti">the youngest daughter of</p>
+                                    <h2 class="name bapak">the late Mr Mudjijanto <br>&<br> Mrs Mujiyem </h2>
+                                </div>
+                            </div>
+                            <div class="flex flex-reverse">
+                                <div class="img">
+                                    <img src="media/3.jpg" alt="Ira">
+                                </div>
+                                <div class="title-groom">
+                                    <h2 class="name title-desktop">Ardie P Muhammad</h2>
+                                    <h2 class="name title-mobile">Ardie Perdana Muhammad</h2>
+                                    <p class="binti">the eldest son of</p>
+                                    <h2 class="name bapak">Mr Aris Setiyono <br>&<br> Mrs Nok Darti</h2>
+                                </div>
+                            </div>
+                            <div class="moment" id="moment">
+                                <h2>Our Moments</h2>
+                                <div class="gallery">
+    								<div class="gallery-item">
+    									<img src="media/IMG_6455.JPG" alt="Moment 1">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6421.JPG" alt="Moment 2">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6453.JPG" alt="Moment 3">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6466.JPG" alt="Moment 4">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6586.JPG" alt="Moment 5">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6550.JPG" alt="Moment 6">
+    								</div>
+    								<div class="gallery-item">
+    									<img src="media/IMG_6571.JPG" alt="Moment 7">
+    								</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section reveal date-time">
+                        	<h2 class="dtv">Date, Time, and Venue</h2>
+                            <div class="parallax">
+                                <div class="content">
+                                    <div class="event">
+                                        <h3>Marriage</h3>
+                                        <p><strong>Sun, December 22 2024</strong></p>
+                                        <p class="time"><strong>9:00 AM</strong></p>
+                                    </div>
+                                    <div class="event">
+                                        <h3>Reception</h3>
+                                        <p><strong>Sun, December 22 2024</strong></p>
+                                        <p class="time"><strong>11.00 AM - 5.00 PM</strong></p>
+                                    </div>
+    								<div class="event countdown">
+    									<h3>Marriage Countdown</h3>
+    									<p id="countdown"></p>
+    								</div>
+    								<div class="event location"> 
+    									<h3>Location</h3>
+    									<div style="display: flex; justify-content: center; width: 100%; height: 100%;">
+    										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.6964025225227!2d106.8378135!3d-6.3199139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edc1ce4914a5%3A0x2f1deef3f5eb0169!2sJl.%20Guru%20No.24%2C%20RT.6%2FRW.2%2C%20Lenteng%20Agung%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012610!5e0!3m2!1sid!2sid!4v1729087906441!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    										<!-- Button in bottom-left corner -->
+    										<a href="https://maps.app.goo.gl/az7iLZbq99PNMGPz8" target="_blank" style="position: absolute; bottom: 10px; left: 10px; background: rgba(255, 255, 255, 0.7); color: black; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
+    											Open Google Maps
+    										</a>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+
+                        <!-- Countdown -->
+                        <div id="countdown-container">
+                            <div id="countdown"></div>
+                        </div>
+
+                        <div class="section reveal transfer">
+                            <h2 class="kh">Send Gift</h2>
+                            <div class="flex center">
+                                <div class="label flex">
+                                    <div class="item active" data-name='bank'>Bank Transfer</div>
+                                    <div class="item" data-name='qris'>Qris</div>
+                                </div>
+                                <div class="info">
+                                    <div class="bank">
+                                        <p class="pengiriman">For gift delivery, you can send to the following address:<br>
+                    					<strong><em>Jl. Guru, Gang Ciliwung I, RT 06/02, No. 25, Lenteng Agung</em></strong>
+                    					<br><br>You can also transfer to one or all of the bank accounts below:
+                    						</p>
+                    					<div class="account">
+                                            <div class="details">
+                                                <p class="bank-name">Mandiri in the name of Devi Indrasari</p>
+                                                <p class="account-number"><strong><em>9000017616443</em></strong> <i class="fa-regular fa-copy" data-num='9000017616443' title='Copy'></i></p>
+                                            </div>
+                                        </div>
+                                        <div class="account">
+                                            <div class="details">
+                                                <p class="bank-name">BCA in the name of Ardie Perdana Muhammad</p>
+                                                <p class="account-number"><strong><em>1650380475</em></strong> <i class="fa-regular fa-copy" data-num='1650380475' title='Copy'></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qris" style="display:none;">
+                                        <img src="media/qris2.jpg" alt="QRIS">
+                                        <a href="media/qris2.jpg" download class="download-btn">Download QRIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    	<div class="footer">
+                    		<p>&copy; 2024 Created by ourselves, the result makes both of us smile.
+                    		  <br>ps : Supported by Quintal's Programmer <strong>A.Fauzi</strong>
+                            </p>
+                    	</div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
-    </section>
 
 
-    <section class="music">
-        <!-- section for music asap -->
-    </section>
-</div>
+        <section class="music">
+            <!-- section for music asap -->
+        </section>
+    </div>
+
+<script>
+    window.lang = 'en'
+</script>
 </body>
 </html>
