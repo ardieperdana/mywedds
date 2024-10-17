@@ -86,6 +86,17 @@ function copyToClipboard(text) {
     });
 }
 
+const resizeNav = () =>{
+    const viewportWidth = window.innerWidth
+    const contentBodyWidth = $('.content-body').outerWidth()
+    const navWidth = $('nav.top-navbar').outerWidth()
+    const primaryPaneWidth = $('.primary-pane .pane').outerWidth() 
+    if (navWidth > contentBodyWidth) {
+        const newMaxwidth = parseInt(viewportWidth - primaryPaneWidth);
+        $('nav.top-navbar').css('max-width', newMaxwidth)
+    }
+}
+
 $(function(){
     const dataTranslate = {
         'id' : 'index.html',
@@ -172,7 +183,8 @@ $(function(){
     $("#btn-open").click(function(e){
         $('.img-overlay').fadeOut('fast');
         $('.content-body').fadeIn('slow');
-        $('audio').trigger('play')
+        $('audio').trigger('play');
+        resizeNav()
     })
 
     $('#music').click(function(e){
