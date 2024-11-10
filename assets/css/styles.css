@@ -706,6 +706,7 @@ section.secondary-pane .pane {
 
 .flip-card {
     perspective: 1000px; /* Efek kedalaman saat flip */
+	border-radius: 30px; /* Make the card rounded */
 }
 
 .flip-card-inner {
@@ -715,6 +716,7 @@ section.secondary-pane .pane {
     transform-style: preserve-3d;
     transform: rotateX(0);
     transition: transform 0.5s;
+	border-radius: 30px; /* Make the inner flip card rounded */
 }
 
 .flip-card-front,
@@ -1084,5 +1086,25 @@ iframe {
         padding: 40px; /* Tambah padding untuk desktop besar */
         opacity: 1; /* Opacity penuh untuk desktop besar */
         margin-bottom: 40px; /* Jarak bawah yang lebih besar */
+    }
+}
+
+#btn-open {
+    width: 150px; /* Sesuaikan ukuran button */
+    height: auto;
+    border: none;
+    background-size: contain;
+	background: linear-gradient(to left, #282929, #d9dbde);
+	color: #FFFFFF;
+    cursor: pointer;
+    animation: rotateLeftRight 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes rotateLeftRight {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg); /* Rotasi kanan */
     }
 }
