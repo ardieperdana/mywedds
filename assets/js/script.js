@@ -26,13 +26,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        let dayTitle = 'Hari'
+        let hourTitle = 'Jam'
+        let minuteTitle = 'Menit'
+        let secondTitle = 'Detik'
+        let countdownTitle = 'Waktu Telah Tiba!'
+
+        if (window.lang == 'en') {
+
+        }else if(window.lang == 'ar'){
+
+        }
+
         document.getElementById("countdown").innerHTML = `
-            <strong>${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik</strong>
+            <strong>${days} ${dayTitle} ${hours} ${hourTitle} ${minutes} ${minuteTitle} ${seconds} ${secondTitle}</strong>
         `;
 
         if (distance < 0) {
             clearInterval(countdownFunction);
-            document.getElementById("countdown").innerHTML = "Waktu Telah Tiba!";
+            document.getElementById("countdown").innerHTML = countdownTitle;
         }
     }, 1000);
 });
@@ -86,7 +98,19 @@ function copyToClipboard(text) {
     });
 }
 
+const resizeNav = () =>{
+    const viewportWidth = window.innerWidth
+    const contentBodyWidth = $('.content-body').outerWidth()
+    const navWidth = $('nav.top-navbar').outerWidth()
+    const primaryPaneWidth = $('.primary-pane .pane').outerWidth() 
+    if (navWidth > contentBodyWidth) {
+        const newMaxwidth = parseInt(viewportWidth - primaryPaneWidth);
+        $('nav.top-navbar').css('max-width', newMaxwidth)
+    }
+}
+
 $(function(){
+    console.log('SAAT INI BAHASA',window.lang)
     const dataTranslate = {
         'id' : 'index.html',
         'ar' : 'index-ar.html',
@@ -172,7 +196,8 @@ $(function(){
     $("#btn-open").click(function(e){
         $('.img-overlay').fadeOut('fast');
         $('.content-body').fadeIn('slow');
-        $('audio').trigger('play')
+        $('audio').trigger('play');
+        resizeNav()
     })
 
     $('#music').click(function(e){
