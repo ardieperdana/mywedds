@@ -641,7 +641,7 @@ section.secondary-pane .pane {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 400px; /* Menyesuaikan tinggi sesuai kebutuhan */
+    min-height: 800px; /* Menyesuaikan tinggi sesuai kebutuhan */
     width: 100%;
     display: flex;
     align-items: center;
@@ -661,7 +661,7 @@ section.secondary-pane .pane {
 
 .content {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 0px;
