@@ -187,6 +187,46 @@
                             <div id="countdown"></div>
                         </div>
 
+<title>Form Kehadiran</title>
+<body>
+    <h2>Form Kehadiran</h2>
+    <form id="kehadiranForm">
+        Nama: <input type="text" id="nama" required><br>
+        Kehadiran:<br>
+        <textarea id="kehadiran" rows="4" cols="50" placeholder="Tulis konfirmasi kehadiran Anda..." required></textarea><br>
+        <button type="submit">Kirim Kehadiran</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx8BvFxCEXFupcmf0rfDVDgxK0-CiO5ZEPOkAN3nSTWs4c1hkQJRFfldNpa4NTMfMunNA/exec';
+
+        document.getElementById('kehadiranForm').addEventListener('submit', e => {
+            e.preventDefault();
+            
+            const nama = document.getElementById('nama').value;
+            const kehadiran = document.getElementById('kehadiran').value;
+
+            // Kirim data menggunakan fetch
+            fetch(scriptURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'nama': nama, 'kehadiran': kehadiran })
+            })
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('response').innerHTML = text;  // Tampilkan respon
+                document.getElementById('kehadiranForm').reset();  // Reset form
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('response').innerHTML = 'Gagal menyimpan data';
+            });
+        });
+    </script>
+</body>
+			    
                         <div class="section reveal transfer">
                             <h2 class="kh">Send Gift</h2>
                             <div class="flex center">
