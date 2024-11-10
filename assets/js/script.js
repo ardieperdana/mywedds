@@ -14,39 +14,6 @@ document.addEventListener('scroll', function() {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const targetDate = new Date("December 22, 2024 09:00:00").getTime();
-
-    // Membuat elemen countdown
-    const countdownElem = document.getElementById("countdown");
-
-    // Inisialisasi FlipClock
-    const clock = $(countdownElem).FlipClock(0, {
-        clockFace: 'DailyCounter',
-        countdown: true
-    });
-
-    // Mengupdate countdown setiap detik
-    const countdownFunction = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Mengupdate flip clock dengan nilai baru
-        clock.setValue(`${days}:${hours}:${minutes}:${seconds}`);
-
-        // Jika countdown selesai
-        if (distance < 0) {
-            clearInterval(countdownFunction);
-            document.getElementById("countdown").innerHTML = "Waktu Telah Tiba!";
-        }
-    }, 1000);
-});
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.createElement('div');
@@ -154,7 +121,6 @@ $(function(){
         if (name) {
             suffixData = `QQ=${encodeURIComponent(name)}`;
         }
-
         if (closeFriend) {
             if (suffixData != '') suffixData += '&';
             suffixData += `close=${closeFriend}`
@@ -213,3 +179,63 @@ $(function(){
         }
     })
 })
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const targetDate = new Date("December 22, 2024 09:00:00").getTime();
+
+    let prevDays, prevHours, prevMinutes, prevSeconds;
+
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update days, hours, and minutes (flip only when the value changes)
+        if (days !== prevDays) {
+            updateAndFlip("days", days);
+            prevDays = days;
+        }
+        if (hours !== prevHours) {
+            updateAndFlip("hours", hours);
+            prevHours = hours;
+        }
+        if (minutes !== prevMinutes) {
+            updateAndFlip("minutes", minutes);
+            prevMinutes = minutes;
+        }
+        if (seconds !== prevSeconds) {
+            updateAndFlip("seconds", seconds);
+            prevSeconds = seconds;
+        }
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "Waktu Telah Tiba!";
+        }
+    }, 1000);
+
+    function updateAndFlip(id, value) {
+        const front = document.getElementById(id);
+        const back = document.getElementById(id + "-back");
+
+        // Only flip if the value changes
+        if (front.innerText !== value.toString()) {
+            // Update the front and back numbers
+            front.innerText = value;
+            back.innerText = value;
+
+            // Add flip effect
+            const flipCardInner = front.closest('.flip-card-inner');
+            flipCardInner.style.transform = "rotateX(120deg)";
+            setTimeout(() => {
+                flipCardInner.style.transform = "rotateX(0deg)";
+            }, 666);
+		}
+    }
+});
+

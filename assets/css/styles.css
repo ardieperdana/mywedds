@@ -689,7 +689,67 @@ section.secondary-pane .pane {
     text-align: center;
     margin-top: 10px;
 	margin-bottom: 0;
+	max-width: 600px;
 }
+
+#countdown {
+    display: flex; /* Gunakan flexbox untuk menyusun elemen sejajar */
+    justify-content: center; /* Mengatur elemen agar berada di tengah */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    gap: 30px; /* Memberi jarak antar unit waktu */
+    font-family: Arial, sans-serif; /* Opsional: untuk memperbaiki tampilan font */
+}
+
+.time-unit {
+    text-align: center;
+}
+
+.flip-card {
+    perspective: 1000px; /* Efek kedalaman saat flip */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: rotateX(0);
+    transition: transform 0.5s;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.flip-card-front {
+    background-color: #D3D3D399; /* Warna belakang dengan transparansi */
+    color: #4B3C3B; /* Warna teks */
+}
+
+.flip-card-back {
+    background-color: #6482AD; /* Warna belakang flip */
+    color: #4B3C3B; /* Warna teks */
+    transform: rotateX(180deg);
+}
+
+.time-unit strong {
+    font-size: 2.5rem;
+}
+
+.time-unit p {
+    font-size: 1rem;
+    color: #666; /* Warna label */
+}
+
+
 
 .location {
     flex: 1; /* Mengatur lebar elemen lokasi agar fleksibel */
