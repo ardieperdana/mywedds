@@ -17,6 +17,16 @@ document.addEventListener('scroll', function() {
 document.addEventListener("DOMContentLoaded", () => {
     const targetDate = new Date("December 22, 2024 09:00:00").getTime();
 
+    // Membuat elemen countdown
+    const countdownElem = document.getElementById("countdown");
+
+    // Inisialisasi FlipClock
+    const clock = $(countdownElem).FlipClock(0, {
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
+
+    // Mengupdate countdown setiap detik
     const countdownFunction = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
@@ -26,28 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        let dayTitle = 'Hari'
-        let hourTitle = 'Jam'
-        let minuteTitle = 'Menit'
-        let secondTitle = 'Detik'
-        let countdownTitle = 'Waktu Telah Tiba!'
+        // Mengupdate flip clock dengan nilai baru
+        clock.setValue(`${days}:${hours}:${minutes}:${seconds}`);
 
-        if (window.lang == 'en') {
-
-        }else if(window.lang == 'ar'){
-
-        }
-
-        document.getElementById("countdown").innerHTML = `
-            <strong>${days} ${dayTitle} ${hours} ${hourTitle} ${minutes} ${minuteTitle} ${seconds} ${secondTitle}</strong>
-        `;
-
+        // Jika countdown selesai
         if (distance < 0) {
             clearInterval(countdownFunction);
-            document.getElementById("countdown").innerHTML = countdownTitle;
+            document.getElementById("countdown").innerHTML = "Waktu Telah Tiba!";
         }
     }, 1000);
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.createElement('div');
