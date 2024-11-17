@@ -97,7 +97,7 @@ $(function(){
     $('nav').css('filter','invert(1)')
     $(window).scroll(function(){
         $('nav').css('filter','invert(1)')
-        if ($(window).scrollTop() > 900) {
+        if ($(window).scrollTop() > 700) {
             $('nav').css('filter','invert(0)')
         }
     })
