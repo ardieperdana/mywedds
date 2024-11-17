@@ -730,22 +730,19 @@ section.secondary-pane .pane {
     align-items: center;
     font-size: 2.5rem;
 }
-
 .flip-card-front {
     background-color: #D3D3D399; /* Warna belakang dengan transparansi */
     color: #4B3C3B; /* Warna teks */
 }
-
 .flip-card-back {
-    background-color: #6482AD; /* Warna belakang flip */
+    background-color: #D3D3D399; /* Warna belakang flip */
     color: #4B3C3B; /* Warna teks */
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+	transform: rotateX(150deg);
 }
-
 .time-unit strong {
     font-size: 2.5rem;
 }
-
 .time-unit p {
     font-size: 1rem;
     color: #666; /* Warna label */
@@ -761,11 +758,80 @@ section.secondary-pane .pane {
     margin-top: 10px;
     text-align: center; /* Atur teks di dalam lokasi agar berada di tengah */
 }
-	
+ 
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #003366 !important;
+  background: #D3D3D399 !important;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
 
-    @media (max-width: 768px) {
-        .event {
-            width: 100%; /* Full width di mobile */
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #fbc638;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+
+@media (max-width: 768px) {
+   .event {
+      width: 100%; /* Full width di mobile */
         }
     }
 

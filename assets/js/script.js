@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
             flipCardInner.style.transform = "rotateX(120deg)";
             setTimeout(() => {
                 flipCardInner.style.transform = "rotateX(0deg)";
-            }, 666);
+            }, 500);
 		}
     }
 });
