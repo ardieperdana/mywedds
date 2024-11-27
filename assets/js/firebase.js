@@ -56,5 +56,6 @@ $(function(){
 	    });
 	    $('#attendanceForm').reset();
 	    alert("Data submitted successfully!");
+	    getComments()
     })
 });
