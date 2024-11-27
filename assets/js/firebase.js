@@ -57,9 +57,6 @@ $(function(){
     getComments();
     
 		$('#attendanceForm').submit(function(e){
-        // Add loading screen
-		$('#loadingScreen').addClass('show');
-        e.preventDefault();
         
         // Ambil data dari form
         const name = $('#name').val();
@@ -87,11 +84,6 @@ $(function(){
             getComments();
         }).catch((error) => {
             console.error("Error submitting data:", error);
-        }).finally(() => {
-            // Menyembunyikan loading screen secara perlahan
-            setTimeout(() => {
-                $('#loadingScreen').removeClass('show');
-            }, 2000); // Menghapus class 'show' setelah 4 detik
         });
     });
 });
