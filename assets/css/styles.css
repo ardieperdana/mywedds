@@ -1519,24 +1519,30 @@ iframe {
 
 #comments {
   margin-top: 20px;
-  padding: 0 10px; /* Memberikan padding sedikit agar tidak menempel ke sisi */
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column; /* Menjaga agar semua komentar tampil vertikal */
+  gap: 10px; /* Jarak antar komentar */
 }
 
 .comment-item {
-  background-color: #f0f0f0; /* Warna latar belakang komentar */
+  background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 10px; /* Memberikan jarak antar komentar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan */
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Pastikan kotak komentar mengambil lebar penuh */
+  text-align: left; /* Memastikan teks di dalam box rata kiri */
 }
 
 .comment-item p {
-  text-align: left; /* Menjadikan komentar rata kiri */
-  margin: 5px 0; /* Menambahkan margin kecil agar gap antar komentar lebih kecil */
+  margin: 5px 0;
+  text-align: left; /* Pastikan komentar rata kiri */
 }
 
 .comment-item em {
-  color: #888; /* Menambahkan warna berbeda untuk status kehadiran */
+  color: #888;
   font-style: normal;
-  font-size: 0.85rem; /* Ukuran font lebih kecil untuk status */
+  font-size: 0.85rem;
+  text-align: left; /* Menyelaraskan status kehadiran di kiri */
 }
