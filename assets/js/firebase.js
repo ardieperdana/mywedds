@@ -26,14 +26,18 @@ const getComments = () => {
 	const dbRef = ref(db, `${tableName}/`)
 	$('#comments').html('')
 	const commentsDiv = $('#comments');
+	
 	onValue(dbRef, (snapshot) => {
 		snapshot.forEach((childSnapshot) => {
 			const childKey = childSnapshot.key;
 			const childData = childSnapshot.val();
 			const elem = document.createElement('div')
-			elem.innerHTML = `
-				<p><strong>${childData.name}</strong>: ${childData.comment}</p>
-			`;
+      elem.innerHTML = `
+        <div class="comment-item">
+          <p><strong>${childData.name}</strong>: ${childData.comment}</p>
+          <p><em>${childData.attendance}</em></p> <!-- Display attendance status -->
+        </div>
+      `;
 
 	      $(elem).appendTo(commentsDiv);
 	  	});
@@ -53,19 +57,21 @@ $(function(){
         // Ambil data dari form
         const name = $('#name').val();
         const comment = $('#comment').val();
+		const attendance = $('#attendance').val();
         
         // Simpan data ke Realtime database
         const userId = push(child(ref(db), tableName)).key;
         set(ref(db, `${tableName}/${userId}`), {
             name: name,
             comment: comment,
+			attendance: attendance
         }).then(() => {
           
             // Reset form
             $('#name').val('');
             $('#comment').val('');
-            
-            // Get and display comments
+			$('#attendance').val('');
+			
             getComments();
         }).catch((error) => {
             console.error("Error submitting data:", error);
