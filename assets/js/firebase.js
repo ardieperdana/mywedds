@@ -26,18 +26,14 @@ const getComments = () => {
 	const dbRef = ref(db, `${tableName}/`)
 	$('#comments').html('')
 	const commentsDiv = $('#comments');
-	
 	onValue(dbRef, (snapshot) => {
 		snapshot.forEach((childSnapshot) => {
 			const childKey = childSnapshot.key;
 			const childData = childSnapshot.val();
 			const elem = document.createElement('div')
-      elem.innerHTML = `
-        <div class="comment-item">
-          <p><strong>${childData.name}</strong>: ${childData.comment}</p>
-          <p><em>${childData.attendance}</em></p> <!-- Display attendance status -->
-        </div>
-      `;
+			elem.innerHTML = `
+				<p><strong>${childData.name}</strong>: ${childData.comment}</p>
+			`;
 
 	      $(elem).appendTo(commentsDiv);
 	  	});
@@ -47,36 +43,23 @@ const getComments = () => {
 }
 
 $(function(){
-    getComments();
-    
-		$('#attendanceForm').submit(function(e){
-        
-        // Ambil data dari form
-        const name = $('#name').val();
-        const comment = $('#comment').val();
-		const attendance = $('#attendance').val();
-        
-		// Fungsi untuk memeriksa apakah input mengandung bad words
-		const containsBadWord = (input) => {
-			return badWords.some(word => input.toLowerCase().includes(word.toLowerCase()));
-		};
+    getComments()	
+	$('#attendanceForm').submit(function(e){
+	    e.preventDefault();
 
-        // Simpan data ke Realtime database
-        const userId = push(child(ref(db), tableName)).key;
-        set(ref(db, `${tableName}/${userId}`), {
-            name: name,
-            comment: comment,
-			attendance: attendance
-        }).then(() => {
-          
-            // Reset form
-            $('#name').val('');
-            $('#comment').val('');
-			$('#attendance').val('');
-			
-            getComments();
-        }).catch((error) => {
-            console.error("Error submitting data:", error);
-        });
-    });
+	    // Ambil data dari form
+	    const name = $('#name').val();
+	    const comment = $('#comment').val();
+	    
+	    // Simpan data ke Realtime database
+	    const userId = push(child(ref(db), tableName)).key
+	    set(ref(db, `${tableName}/${userId}`), {
+	    	name: name,
+	    	comment: comment,
+	    });
+	    alert("Data submitted successfully!");
+	    $('#name').val('')
+	    $('#comment').val('');
+	    getComments()
+    })
 });
