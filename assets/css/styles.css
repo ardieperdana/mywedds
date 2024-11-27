@@ -1442,3 +1442,106 @@ iframe {
     opacity: 1;
   }
 }
+
+
+.att {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #58bc82;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input[type="text"],
+.form textarea {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+  resize: vertical;
+}
+
+.form input[type="text"]:focus,
+.form textarea:focus {
+  outline: 2px solid var(--clr);
+}
+
+.label {
+  align-self: flex-start;
+  color: var(--clr);
+  font-weight: 600;
+}
+
+.form .submit {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form .submit:hover {
+  background-color: var(--clr);
+  color: var(--bg-dark);
+}
+
+/* CSS untuk bagian komentar */
+#comments {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-light);
+  border: 1px solid var(--bg-dark);
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+#comments .comment {
+  background-color: var(--clr-alpha);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--bg-dark);
+}
+
+#comments .comment strong {
+  color: var(--clr);
+  font-weight: bold;
+}
+
+#comments .comment p {
+  margin-top: 0.5rem;
+  color: var(--bg-dark);
+}
