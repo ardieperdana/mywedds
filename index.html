@@ -276,23 +276,34 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
+			
+			</div>
+			<div class="att">
+				<h3 class="kh">Kirim Doa dan Ucapan</h3>
+				<form id="attendanceForm" class="form">
+				  <div class="input-row">
+					<span class="input-span">
+					  <input 
+						type="text" 
+						name="name" 
+						id="name" 
+						placeholder="Nama Kamu" 
+						required />
+					</span>
+					<span class="input-span">
+					  <textarea 
+						id="comment" 
+						name="comment" 
+						placeholder="Ucapan & Do'a Restu" 
+						required></textarea>
+					</span>
+				  </div>
+				  <button type="submit" class="submit">Submit</button>
+				</form>
+		</div>
+	<div id="comments"></div>
 </div>
 
-<div class="att">
-<h3>Konfirmasi Kehadiran</h3>
-	<form id="attendanceForm">
-	  <label for="name">Name:</label>
-	  <input type="text" id="name" required>
-	  
-	  <label for="comment">Comment:</label>
-	  <textarea id="comment" required></textarea>
-	  
-	  <button type="submit">Submit</button>
-	</form>
-</div>
-	<div id="comments"></div>
 		
 		
 <div id="loadingScreen" class="loader">
