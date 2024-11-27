@@ -32,7 +32,7 @@ $(function(){
 	    
 	    // Simpan data ke Realtime database
 	    // const userId = push(child(ref(db), 'attendance')).key;
-	    set(ref(database, 'attendance/'), {
+	    set(ref(db, 'attendance/'), {
 	    	name: name,
 	    	comment: comment,
 	    });
