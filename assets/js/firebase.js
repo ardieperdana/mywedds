@@ -60,8 +60,7 @@ $(function(){
             name: name,
             comment: comment,
         }).then(() => {
-            alert("Data submitted successfully!");
-            
+          
             // Reset form
             $('#name').val('');
             $('#comment').val('');
