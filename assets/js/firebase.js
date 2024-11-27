@@ -21,6 +21,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+const getComments = () => {
+	const dbRef = ref(db, 'attendance/')
+	const commentsDiv = $('#comments');
+	onValue(dbRef, (snapshot) => {
+		snapshot.forEach((childSnapshot) => {
+	      const childKey = childSnapshot.key;
+	      const childData = childSnapshot.val();
+	      const elem = document.createElement('div')
+	      elem.innerHTML = `
+	      	<p><strong>${data.name}</strong>: ${data.comment}</p>
+	      `;
+
+	      $(elem).appendTo(commentsDiv);
+	  	});
+	},{
+		onlyOnce: true
+    });
+}
 
 $(function(){
 	$('#attendanceForm').submit(function(e){
@@ -36,24 +54,7 @@ $(function(){
 	    	name: name,
 	    	comment: comment,
 	    });
-		// .then(() => {
-	    //     alert("Data submitted successfully!");
-	    //     // Clear form
-	    //     $('#attendanceForm').reset();
-	    // }).catch(error => {
-	    //     alert("Error submitting data: " + error);
-	    // });
-      
-	    // db.collection('attendance').orderBy('desc').onSnapshot(snapshot => {
-    	// 	const commentsDiv = $('#comments');
-    	// 	commentsDiv.innerHTML = ''; // Clear previous comments
-    	// 	snapshot.forEach(doc => {
-    	// 		const data = doc.data();
-    	// 		const commentElement = document.createElement('div');
-    	// 		commentElement.innerHTML = `
-    	// 		<p><strong>${data.name}</strong>: ${data.comment}</p>
-    	// 		`;
-    	// 	commentsDiv.appendChild(commentElement);
-    	// });
+	    $('#attendanceForm').reset();
+	    alert("Data submitted successfully!");
     })
 });
