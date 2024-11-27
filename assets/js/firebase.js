@@ -40,16 +40,16 @@ $(function(){
 	        alert("Error submitting data: " + error);
 	    });
       
-	    db.collection('attendance').orderBy('desc').onSnapshot(snapshot => {
-    		const commentsDiv = $('#comments');
-    		commentsDiv.innerHTML = ''; // Clear previous comments
-    		snapshot.forEach(doc => {
-    			const data = doc.data();
-    			const commentElement = document.createElement('div');
-    			commentElement.innerHTML = `
-    			<p><strong>${data.name}</strong>: ${data.comment}</p>
-    			`;
-    		commentsDiv.appendChild(commentElement);
-    	});
+	    // db.collection('attendance').orderBy('desc').onSnapshot(snapshot => {
+    	// 	const commentsDiv = $('#comments');
+    	// 	commentsDiv.innerHTML = ''; // Clear previous comments
+    	// 	snapshot.forEach(doc => {
+    	// 		const data = doc.data();
+    	// 		const commentElement = document.createElement('div');
+    	// 		commentElement.innerHTML = `
+    	// 		<p><strong>${data.name}</strong>: ${data.comment}</p>
+    	// 		`;
+    	// 	commentsDiv.appendChild(commentElement);
+    	// });
     })
-})
+});
