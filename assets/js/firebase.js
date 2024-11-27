@@ -58,6 +58,8 @@ $(function(){
 	    	comment: comment,
 	    });
 	    alert("Data submitted successfully!");
+	    $('#name').val('')
+	    $('#comment').val('');
 	    getComments()
     })
 });
