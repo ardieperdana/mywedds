@@ -43,23 +43,38 @@ const getComments = () => {
 }
 
 $(function(){
-    getComments()	
-	$('#attendanceForm').submit(function(e){
-	    event.preventDefault();
+    getComments();
+    
+    $('#attendanceForm').submit(function(e){
+        // Add loading screen
+        $('#loadingScreen').show(); // Menampilkan loading screen
+        e.preventDefault();
+        
+        // Ambil data dari form
+        const name = $('#name').val();
+        const comment = $('#comment').val();
+        
+        // Simpan data ke Realtime database
+        const userId = push(child(ref(db), tableName)).key;
+        set(ref(db, `${tableName}/${userId}`), {
+            name: name,
+            comment: comment,
+        }).then(() => {
+            alert("Data submitted successfully!");
+            
+            // Reset form
+            $('#name').val('');
+            $('#comment').val('');
+            
+            // Get and display comments
+            getComments();
+        }).catch((error) => {
+            console.error("Error submitting data:", error);
+        }).finally(() => {
+            // Remove loading screen
+            $('#loadingScreen').hide(); // Menyembunyikan loading screen
+        });
+    });
+});
 
-	    // Ambil data dari form
-	    const name = $('#name').val();
-	    const comment = $('#comment').val();
-	    
-	    // Simpan data ke Realtime database
-	    const userId = push(child(ref(db), tableName)).key
-	    set(ref(db, `${tableName}/${userId}`), {
-	    	name: name,
-	    	comment: comment,
-	    });
-	    alert("Data submitted successfully!");
-	    $('#name').val('')
-	    $('#comment').val('');
-	    getComments()
-    })
 });
