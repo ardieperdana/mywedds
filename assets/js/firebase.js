@@ -17,7 +17,7 @@ const firebaseConfig = {
 	databaseURL: "https://mywedds-bd172-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
-// Initialize Firebase
+/// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const tableName = 'attendance'

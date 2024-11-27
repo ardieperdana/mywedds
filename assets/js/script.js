@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const front = document.getElementById(id);
         const back = document.getElementById(id + "-back");
 
-        // Only flip if the value changes
+        // Onlly flip if the value changes
         if (front.innerText !== value.toString()) {
             // Update the front and back numbers
             front.innerText = value;
