@@ -79,7 +79,7 @@ $(function(){
             // Menyembunyikan loading screen secara perlahan
             setTimeout(() => {
                 $('#loadingScreen').removeClass('show');
-            }, 2000); // Menghapus class 'show' setelah 4 detik
+            }, 2000); // Menghapus class 'show' setelah 2 detik
         });
     });
 });
