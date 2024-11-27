@@ -26,14 +26,18 @@ const getComments = () => {
 	const dbRef = ref(db, `${tableName}/`)
 	$('#comments').html('')
 	const commentsDiv = $('#comments');
+	
 	onValue(dbRef, (snapshot) => {
 		snapshot.forEach((childSnapshot) => {
 			const childKey = childSnapshot.key;
 			const childData = childSnapshot.val();
 			const elem = document.createElement('div')
-			elem.innerHTML = `
-				<p><strong>${childData.name}</strong>: ${childData.comment}</p>
-			`;
+      elem.innerHTML = `
+        <div class="comment-item">
+          <p><strong>${childData.name}</strong>: ${childData.comment}</p>
+          <p><em>${childData.attendance}</em></p> <!-- Display attendance status -->
+        </div>
+      `;
 
 	      $(elem).appendTo(commentsDiv);
 	  	});
@@ -43,23 +47,39 @@ const getComments = () => {
 }
 
 $(function(){
-    getComments()	
-	$('#attendanceForm').submit(function(e){
-	    e.preventDefault();
-
-	    // Ambil data dari form
-	    const name = $('#name').val();
-	    const comment = $('#comment').val();
-	    
-	    // Simpan data ke Realtime database
-	    const userId = push(child(ref(db), tableName)).key
-	    set(ref(db, `${tableName}/${userId}`), {
-	    	name: name,
-	    	comment: comment,
-	    });
-	    alert("Data submitted successfully!");
-	    $('#name').val('')
-	    $('#comment').val('');
-	    getComments()
-    })
+    getComments();
+    
+		$('#attendanceForm').submit(function(e){
+        // Add loading screen
+		$('#loadingScreen').addClass('show');
+        e.preventDefault();
+        
+        // Ambil data dari form
+        const name = $('#name').val();
+        const comment = $('#comment').val();
+		const attendance = $('#attendance').val();
+        
+        // Simpan data ke Realtime database
+        const userId = push(child(ref(db), tableName)).key;
+        set(ref(db, `${tableName}/${userId}`), {
+            name: name,
+            comment: comment,
+			attendance: attendance
+        }).then(() => {
+          
+            // Reset form
+            $('#name').val('');
+            $('#comment').val('');
+			$('#attendance').val('');
+			
+            getComments();
+        }).catch((error) => {
+            console.error("Error submitting data:", error);
+        }).finally(() => {
+            // Menyembunyikan loading screen secara perlahan
+            setTimeout(() => {
+                $('#loadingScreen').removeClass('show');
+            }, 2000); // Menghapus class 'show' setelah 4 detik
+        });
+    });
 });
