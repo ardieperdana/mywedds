@@ -78,11 +78,16 @@
                 <div class="content-body" style="display:none;">
                     <nav class="top-navbar">
                         <div class="col-left">
-                            <audio autoplay loop>
-                            <source src="media/bgmusic.mp3" type="audio/mpeg">
-                            </audio>
-                            <img id="music" class="play" src="media/sound.png" alt="">
-                        </div>
+							<audio id="bgMusic" autoplay loop>
+								<source id="musicSource" src="media/sound.mp3" type="audio/mpeg">
+							</audio>
+							<select id="musicControl" class="form-select" aria-label="Select Music">
+								<option value="sound.mp3" selected>River Flows in You</option>
+								<option value="sound2.mp3">SC The Pane In The Glass</option>
+								<option value="sound3.mp3">Harvest Moon BTN</option>
+								<option value="mute">Mute</option>
+							</select>
+						</div>
                         <div class="col-right">
                             <img src="media/trans.png" alt="">
                             <select id="translate" class="form-select" aria-label="Default select example">
@@ -282,28 +287,25 @@
 				<h3 class="kh">Kirim Doa dan Ucapan</h3>
 				<form id="attendanceForm" class="form">
 				  <div class="input-row">
+					<div class="input-span">
+					  <div class="container">
+						<input required="" type="text" name="name" class="input" id="name">
+						<label class="label" for="name">Nama</label>
+					  </div>
+					</div>
 					<span class="input-span">
-					  <input 
-						type="text" 
-						name="name" 
-						id="name" 
-						placeholder="Nama Kamu" 
-						required />
+					  <div class="container">
+						<input required="" type="text" name="comment" class="input"required>
+						<label class="label">Ucapan & Do'a Restu</label>
+					  </div>
 					</span>
-					<span class="input-span">
-					  <textarea 
-						id="comment" 
-						name="comment" 
-						placeholder="Ucapan & Do'a Restu" 
-						required></textarea>
-					</span>
-					<span class="input-span">
-        <select id="attendance" required>
-          <option value="" disabled selected>Pilih Kehadiran</option>
-          <option value="Akan Hadir">Akan Hadir</option>
-          <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
-        </select>
-      </span>
+		<span class="input-span">
+			<select id="attendance" required>
+			  <option value="" disabled selected>Pilih Kehadiran</option>
+			  <option value="Akan Hadir">Akan Hadir</option>
+			  <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
+			</select>
+		</span>
 				  </div>
 				  <button type="submit" class="submit">Submit</button>
 				</form>

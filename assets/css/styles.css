@@ -1476,21 +1476,66 @@ iframe {
 }
 
 /* Input dan textarea styling */
-.input-span input,
-.input-span textarea {
-  width: 90%; /* Input lebih lebar */
-  max-width: 500px; /* Batas lebar input */
-  padding: 0.75rem; /* Ruang dalam */
-  border: 1px solid #ccc; /* Border abu-abu */
-  border-radius: 0.5rem; /* Sudut membulat */
-  font-size: 1rem; /* Ukuran font */
-  margin: 0 auto; /* Pusatkan elemen */
+/* From Uiverse.io by AmIt-DasIT */
+.input-row {
+  display: flex;
+  gap: 15px;  /* Menambahkan jarak antar elemen input */
 }
 
-/* Textarea tambahan */
-.input-span textarea {
-  min-height: 4rem;
-  resize: vertical; /* Resize hanya vertikal */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: #333;
+}
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.8s;
+  pointer-events: none;
+}
+
+.input {
+  min-width: 250px;  /* Minimal ukuran agar masih terbaca pada layar kecil */
+  max-width: 100%;   /* Membuat input tidak melebihi lebar kontainer */
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #333;
+  font-size: 15px;
+  background-color: #d6d5d4;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #333;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
 }
 
 /* Submit button styling */
@@ -1545,4 +1590,19 @@ iframe {
   font-style: normal;
   font-size: 0.85rem;
   text-align: left; /* Menyelaraskan status kehadiran di kiri */
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between; /* Membuat elemen dalam baris */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  gap: 10px; /* Menambahkan jarak antar elemen */
+}
+
+.input-span {
+  flex: 1; /* Memberikan dropdown lebih lebar jika diperlukan */
+}
+
+.submit {
+  padding: 10px 20px; /* Ukuran tombol */
 }
