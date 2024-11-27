@@ -1333,7 +1333,7 @@ iframe {
   z-index: 9999;
   opacity: 0; /* Mulai dengan opacity 0 */
   visibility: hidden; /* Tersembunyi secara default */
-  transition: opacity 4s ease-out, visibility 0s linear 4s;
+  transition: opacity 0s ease-out, visibility 2.5s linear 0s;
 }
 
 #loadingScreen.show {
