@@ -17,6 +17,13 @@ const firebaseConfig = {
 	databaseURL: "https://mywedds-bd172-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
+const badWords = ['kata1', 'kata2', 'kata3', 'examplebadword']; // Ganti dengan kata yang sesuai
+
+// Fungsi untuk memeriksa apakah input mengandung bad words
+const containsBadWord = (input) => {
+    return badWords.some(word => input.toLowerCase().includes(word.toLowerCase()));
+};
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
@@ -59,6 +66,20 @@ $(function(){
         const comment = $('#comment').val();
 		const attendance = $('#attendance').val();
         
+		const showWarning = () => {
+			$('#warning').show(); // Tampilkan elemen warning
+		};
+
+		// Fungsi untuk menyembunyikan peringatan jika input sudah bersih
+		const hideWarning = () => {
+			$('#warning').hide(); // Sembunyikan elemen warning
+		};
+
+		// Fungsi untuk memeriksa apakah input mengandung bad words
+		const containsBadWord = (input) => {
+			return badWords.some(word => input.toLowerCase().includes(word.toLowerCase()));
+		};
+
         // Simpan data ke Realtime database
         const userId = push(child(ref(db), tableName)).key;
         set(ref(db, `${tableName}/${userId}`), {

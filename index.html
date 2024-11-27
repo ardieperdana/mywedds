@@ -287,28 +287,26 @@
 				<h3 class="kh">Kirim Doa dan Ucapan</h3>
 				<form id="attendanceForm" class="form">
 				  <div class="input-row">
+					<div class="input-span">
+					  <div class="container">
+						<input required="" type="text" name="name" class="input" id="name">
+						<label class="label" for="name">Nama</label>
+					  </div>
+					</div>
 					<span class="input-span">
-					  <input 
-						type="text" 
-						name="name" 
-						id="name" 
-						placeholder="Nama Kamu" 
-						required />
+					  <div class="container">
+						<input required="" type="text" name="comment" class="input"required>
+						<label class="label">Ucapan & Do'a Restu</label>
+					  </div>
 					</span>
-					<span class="input-span">
-					  <textarea 
-						id="comment" 
-						name="comment" 
-						placeholder="Ucapan & Do'a Restu" 
-						required></textarea>
-					</span>
-					<span class="input-span">
-        <select id="attendance" required>
-          <option value="" disabled selected>Pilih Kehadiran</option>
-          <option value="Akan Hadir">Akan Hadir</option>
-          <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
-        </select>
-      </span>
+				<span id="warning" style="color: red; display: none;">Pake bahasa yang sopan ya bangsat!</span>
+		<span class="input-span">
+			<select id="attendance" required>
+			  <option value="" disabled selected>Pilih Kehadiran</option>
+			  <option value="Akan Hadir">Akan Hadir</option>
+			  <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
+			</select>
+		</span>
 				  </div>
 				  <button type="submit" class="submit">Submit</button>
 				</form>
