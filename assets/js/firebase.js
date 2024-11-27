@@ -47,7 +47,7 @@ $(function(){
     
     $('#attendanceForm').submit(function(e){
         // Add loading screen
-        $('#loadingScreen').show(); // Menampilkan loading screen
+		$('#loadingScreen').addClass('show');
         e.preventDefault();
         
         // Ambil data dari form
