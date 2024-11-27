@@ -41,6 +41,7 @@ const getComments = () => {
 }
 
 $(function(){
+    getComments()	
 	$('#attendanceForm').submit(function(e){
 	    event.preventDefault();
 
@@ -54,7 +55,7 @@ $(function(){
 	    	name: name,
 	    	comment: comment,
 	    });
-	    $('#attendanceForm').reset();
+	    $('#attendanceForm').trigger('reset');
 	    alert("Data submitted successfully!");
 	    getComments()
     })
