@@ -165,19 +165,25 @@ $(function(){
         resizeNav()
     })
 
-    $('#music').click(function(e){
-        $(this).toggleClass('play')
-        $(this).toggleClass('mute')
+    $('#musicControl').change(function() {
+    const selectedValue = $(this).val();  // Ambil nilai dari dropdown
+    const musicElement = $('#bgMusic')[0];
+    const musicSource = $('#musicSource')[0];
 
-        if ($(this).hasClass('play')) {
-            $('audio').trigger('play')
-            $(this).attr('src','media/sound.png')
-            $('audio').prop('muted', false)
-        }else{
-            $('audio').prop('muted', true)
-            $(this).attr('src','media/sound-mute.png')
-        }
-    })
+    if (selectedValue === "mute") {
+        // Jika memilih mute
+        musicElement.muted = true; // Mute audio
+    } else {
+        // Jika memilih musik, ganti sumber audio
+        musicSource.src = 'media/' + selectedValue;
+        
+        // Muat ulang elemen audio setelah sumbernya diubah
+        musicElement.load();  // Muat ulang audio
+        musicElement.play();  // Mainkan audio setelah diganti
+        musicElement.muted = false; // Pastikan tidak mute
+    }
+});
+
 })
 
 document.addEventListener("DOMContentLoaded", () => {
