@@ -24,6 +24,7 @@ const tableName = 'attendance'
 
 const getComments = () => {
 	const dbRef = ref(db, `${tableName}/`)
+	$('#comments').html()
 	const commentsDiv = $('#comments');
 	onValue(dbRef, (snapshot) => {
 		snapshot.forEach((childSnapshot) => {
