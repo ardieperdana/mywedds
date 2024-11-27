@@ -70,8 +70,10 @@ $(function(){
         }).catch((error) => {
             console.error("Error submitting data:", error);
         }).finally(() => {
-            // Remove loading screen
-            $('#loadingScreen').hide(); // Menyembunyikan loading screen
+            // Menyembunyikan loading screen secara perlahan
+            setTimeout(() => {
+                $('#loadingScreen').removeClass('show');
+            }, 4000); // Menghapus class 'show' setelah 4 detik
         });
     });
 });
