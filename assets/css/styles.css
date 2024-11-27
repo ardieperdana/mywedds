@@ -473,8 +473,9 @@ section.secondary-pane .pane {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../media/pngegg.png'); /* Ganti dengan URL gambar latar belakang */
+    background-image: url('../../media/texture-body.png') !important;  /* Ganti dengan URL gambar latar belakang */
     background-size: contain;
+	background-color:var(--bs-body-bg);
     background-position: center;
     opacity: 0.4; /* Opacity 70% */
     z-index: -1;
@@ -675,7 +676,7 @@ section.secondary-pane .pane {
     border-radius: 8px; /* Sudut kotak lebih lembut */
     width: 100%; /* Mengambil lebar penuh dari container */
     min-width: 341px;
-    min-height: 200px; /* Menambah tinggi minimum untuk konten lebih besar */
+    min-height: 150px; /* Menambah tinggi minimum untuk konten lebih besar */
     box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar elemen */
     padding: 10px; /* Menambahkan padding di dalam elemen event */
 	margin-bottom: 0;
@@ -689,7 +690,7 @@ section.secondary-pane .pane {
     text-align: center;
     margin-top: 10px;
 	margin-bottom: 0;
-	max-width: 600px;
+	max-width: 100%;
 }
 
 #countdown {
@@ -1528,6 +1529,13 @@ iframe {
   transition: 0.3s;
   padding-left: 2px;
   transform: translateY(-35px);
+}
+
+.container .input:valid ~ .label.bottom,
+.container .input:focus ~ .label.bottom {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(35px);
 }
 
 .container .input:valid,
