@@ -45,7 +45,7 @@ const getComments = () => {
 $(function(){
     getComments();
     
-    $('#attendanceForm').submit(function(e){
+		$('#attendanceForm').submit(function(e){
         // Add loading screen
 		$('#loadingScreen').addClass('show');
         e.preventDefault();
@@ -73,7 +73,7 @@ $(function(){
             // Menyembunyikan loading screen secara perlahan
             setTimeout(() => {
                 $('#loadingScreen').removeClass('show');
-            }, 4000); // Menghapus class 'show' setelah 4 detik
+            }, 2000); // Menghapus class 'show' setelah 4 detik
         });
     });
 });
