@@ -180,7 +180,6 @@ $(function(){
     })
 })
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const targetDate = new Date("December 22, 2024 09:00:00").getTime();
 
@@ -239,3 +238,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+  document.getElementById('attendanceForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Ambil data dari form
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    
+    // Simpan data ke Firestore
+    db.collection('attendance').add({
+      name: name,
+      comment: comment,
+    })
+    .then(() => {
+      alert("Data submitted successfully!");
+      // Clear form
+      document.getElementById('attendanceForm').reset();
+    })
+    .catch(error => {
+      alert("Error submitting data: " + error);
+    });
+  });
+  
+  db.collection('attendance').orderBy('desc').onSnapshot(snapshot => {
+  const commentsDiv = document.getElementById('comments');
+  commentsDiv.innerHTML = ''; // Clear previous comments
+  
+  snapshot.forEach(doc => {
+    const data = doc.data();
+    const commentElement = document.createElement('div');
+    commentElement.innerHTML = `
+      <p><strong>${data.name}</strong>: ${data.comment}</p>
+    `;
+    commentsDiv.appendChild(commentElement);
+  });
+});
