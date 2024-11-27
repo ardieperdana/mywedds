@@ -17,7 +17,7 @@ measurementId: "G-S9V6GYD8PE"
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getDatabase();
+const db = getDatabase(app);
 
 
 $(function(){
