@@ -50,7 +50,6 @@ $(function(){
     getComments();
     
 		$('#attendanceForm').submit(function(e){
-
         e.preventDefault();
         
         // Ambil data dari form
