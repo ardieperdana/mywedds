@@ -20,18 +20,19 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+const tableName = 'attendance'
 
 const getComments = () => {
-	const dbRef = ref(db, 'attendance/')
+	const dbRef = ref(db, `${tableName}/`)
 	const commentsDiv = $('#comments');
 	onValue(dbRef, (snapshot) => {
 		snapshot.forEach((childSnapshot) => {
-	      const childKey = childSnapshot.key;
-	      const childData = childSnapshot.val();
-	      const elem = document.createElement('div')
-	      elem.innerHTML = `
-	      	<p><strong>${data.name}</strong>: ${data.comment}</p>
-	      `;
+			const childKey = childSnapshot.key;
+			const childData = childSnapshot.val();
+			const elem = document.createElement('div')
+			elem.innerHTML = `
+				<p><strong>${childData.name}</strong>: ${childData.comment}</p>
+			`;
 
 	      $(elem).appendTo(commentsDiv);
 	  	});
@@ -50,12 +51,11 @@ $(function(){
 	    const comment = $('#comment').val();
 	    
 	    // Simpan data ke Realtime database
-	    const userId = push(child(ref(db), 'attendance')).key
-	    set(ref(db, `attendance/${userId}`), {
+	    const userId = push(child(ref(db), tableName)).key
+	    set(ref(db, `${tableName}/${userId}`), {
 	    	name: name,
 	    	comment: comment,
 	    });
-	    $('#attendanceForm').trigger('reset');
 	    alert("Data submitted successfully!");
 	    getComments()
     })
