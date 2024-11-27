@@ -1538,7 +1538,6 @@ iframe {
   inset -1px -1px 6px rgba(255, 255, 255, 0.4);
 }
 
-
 /* Submit button styling */
 .submit {
   padding: 1rem;
@@ -1591,4 +1590,19 @@ iframe {
   font-style: normal;
   font-size: 0.85rem;
   text-align: left; /* Menyelaraskan status kehadiran di kiri */
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between; /* Membuat elemen dalam baris */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  gap: 10px; /* Menambahkan jarak antar elemen */
+}
+
+.input-span {
+  flex: 1; /* Memberikan dropdown lebih lebar jika diperlukan */
+}
+
+.submit {
+  padding: 10px 20px; /* Ukuran tombol */
 }
