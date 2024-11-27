@@ -58,6 +58,7 @@ $(function(){
         const name = $('#name').val();
         const comment = $('#comment').val();
 		const attendance = $('#attendance').val();
+		console.log(name, comment, attendance)
         
         // Simpan data ke Realtime database
         const userId = push(child(ref(db), tableName)).key;
