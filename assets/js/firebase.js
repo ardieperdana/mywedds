@@ -50,8 +50,7 @@ $(function(){
     getComments();
     
 		$('#attendanceForm').submit(function(e){
-        // Add loading screen
-		$('#loadingScreen').addClass('show');
+
         e.preventDefault();
         
         // Ambil data dari form
