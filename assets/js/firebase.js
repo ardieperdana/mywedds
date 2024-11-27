@@ -66,15 +66,6 @@ $(function(){
         const comment = $('#comment').val();
 		const attendance = $('#attendance').val();
         
-		const showWarning = () => {
-			$('#warning').show(); // Tampilkan elemen warning
-		};
-
-		// Fungsi untuk menyembunyikan peringatan jika input sudah bersih
-		const hideWarning = () => {
-			$('#warning').hide(); // Sembunyikan elemen warning
-		};
-
 		// Fungsi untuk memeriksa apakah input mengandung bad words
 		const containsBadWord = (input) => {
 			return badWords.some(word => input.toLowerCase().includes(word.toLowerCase()));
