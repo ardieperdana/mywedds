@@ -31,8 +31,8 @@ $(function(){
 	    const comment = $('#comment').val();
 	    
 	    // Simpan data ke Realtime database
-	    // const userId = push(child(ref(db), 'attendance')).key;
-	    set(ref(db, 'attendance/'), {
+	    const userId = push(child(ref(db), 'attendance')).key
+	    set(ref(db, `attendance/${userId}`), {
 	    	name: name,
 	    	comment: comment,
 	    });
