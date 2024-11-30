@@ -203,11 +203,12 @@ section.secondary-pane .pane {
 }
 
 .guest-flex{
+	background-color: rgba(217, 219, 222, 0.6);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    border: 3px dotted black;
+    border: 3px dashed black;
     padding:15px;
 }
 .guest-name{
@@ -219,6 +220,11 @@ section.secondary-pane .pane {
     font-size: 10px;
 }
 
+.date-highlight {
+	background-color: rgba(217, 219, 222, 0.6);
+    display: inline-block;
+    border-radius: 7px;
+}
 
 .section {
     /* padding: 15px; */
