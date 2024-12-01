@@ -1571,8 +1571,12 @@ iframe {
 }
 
 #comments {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
   margin-top: 20px;
   padding: 0 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column; /* Menjaga agar semua komentar tampil vertikal */
   gap: 10px; /* Jarak antar komentar */
